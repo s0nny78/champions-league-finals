@@ -66,11 +66,11 @@
   .pitch .six.t{top:0;border-top:0}
   .pitch .six.b{bottom:0;border-bottom:0}
   /* player chip */
-  .pl{position:absolute;transform:translate(-50%,-50%);width:14%;min-width:64px;max-width:96px;text-align:center;z-index:2}
-  .pl .jersey{width:34px;height:34px;margin:0 auto;border-radius:50%;display:flex;align-items:center;justify-content:center;
-    font-weight:800;font-size:13px;border:2px solid rgba(255,255,255,.85);box-shadow:0 3px 8px rgba(0,0,0,.35);font-variant-numeric:tabular-nums}
-  .pl .nm{margin-top:3px;font-size:11px;font-weight:600;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.85);
-    line-height:1.15;word-break:break-word}
+  .pl{position:absolute;transform:translate(-50%,-50%);width:18%;min-width:50px;text-align:center;z-index:2}
+  .pl .jersey{width:32px;height:32px;margin:0 auto;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:12.5px;border:2px solid rgba(255,255,255,.85);box-shadow:0 3px 8px rgba(0,0,0,.35);font-variant-numeric:tabular-nums}
+  .pl .nm{margin-top:3px;font-size:clamp(8px,2.25vw,11px);font-weight:600;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.9);
+    line-height:1.12;overflow-wrap:break-word;word-break:normal;hyphens:auto}
   .pl .pos{font-size:9px;color:rgba(255,255,255,.8);text-shadow:0 1px 2px rgba(0,0,0,.8);font-weight:700;letter-spacing:.04em}
   /* footer info */
   .goals{padding:4px 20px 18px}
@@ -87,7 +87,7 @@
   footer.cred{margin-top:26px;color:var(--muted);font-size:12px;text-align:center;line-height:1.6}
   footer.cred a{color:var(--accent2)}
   @media(max-width:560px){
-    .pl{min-width:52px} .pl .jersey{width:28px;height:28px;font-size:11px} .pl .nm{font-size:9.5px}
+    .pl{min-width:44px} .pl .jersey{width:27px;height:27px;font-size:11px}
     .pitch{max-height:none}
   }
 </style>
@@ -304,24 +304,43 @@ const COLORS = {
 };
 const fallback={j:"#444",t:"#fff",d:"#888"};
 
+/* show surnames only on the pitch (full name stays in the hover tooltip) */
+const NAME_FIX={
+  "Park Ji-sung":"Park","Son Heung-min":"Son",
+  "Roberto Carlos":"Roberto Carlos","Júlio César":"Júlio César","David Luiz":"David Luiz",
+  "Thiago Silva":"Thiago Silva","Alex Sandro":"Alex Sandro","Filipe Luís":"Filipe Luís",
+  "Diego Costa":"Diego Costa","Manuel Rui Costa":"Rui Costa","Carlos Alberto":"Carlos Alberto",
+  "Thiago Alcântara":"Thiago","Oleguer Presas":"Oleguer","Gerardo García León":"Gerardo"
+};
+const PARTICLES=new Set(["van","von","de","der","den","del","della","di","da","dos","ten","ter"]);
+function lastName(full){
+  if(NAME_FIX[full]) return NAME_FIX[full];
+  const t=String(full).trim().split(/\s+/);
+  if(t.length===1) return t[0];
+  let start=t.length-1;
+  while(start-1>=0 && PARTICLES.has(t[start-1].toLowerCase())) start--;
+  return t.slice(start).join(" ");
+}
+
 /* every final renders at load — one long page, no view-swapping */
 
 function layout(formation, side){
-  // returns array of {x,y} for the 11 players (index0=GK) in listed order
+  // returns {x,y,n} for the 11 players (index0=GK) in listed order
   const groups=formation.split(/[^0-9]+/).filter(Boolean).map(Number);
   const rows=[1,...groups];               // GK + lines
   const R=rows.length;
-  const out=[]; let idx=0;
+  const PAD=12;                            // % inset from the touchline for the widest players
+  const out=[];
   for(let r=0;r<R;r++){
     const n=rows[r];
     // y: GK near own goal, last line near halfway
     const f = R>1 ? r/(R-1) : 0;
-    const y = side==='top' ? (6 + 41*f) : (94 - 41*f);
+    const y = side==='top' ? (7 + 40*f) : (93 - 40*f);
     for(let k=0;k<n;k++){
-      let x = (100/(n+1))*(k+1);
+      // spread a line across most of the width so dense rows (4–5) get real breathing room
+      let x = n===1 ? 50 : PAD + (100-2*PAD)*(k/(n-1));
       if(side==='top') x = 100 - x;        // mirror so the two teams face naturally
-      out.push({x,y});
-      idx++;
+      out.push({x,y,n});
     }
   }
   return out;
@@ -330,13 +349,15 @@ function layout(formation, side){
 function renderTeam(team, side){
   const col=COLORS[team.name]||fallback;
   const pts=layout(team.formation, side);
+  const wByN={1:32,2:30,3:26,4:22,5:19,6:16};   // chip width (% of pitch) by players-in-row
   let h='';
   team.startingXI.forEach((pl,i)=>{
-    const pt=pts[i]||{x:50,y:side==='top'?10:90};
+    const pt=pts[i]||{x:50,y:side==='top'?10:90,n:1};
     const num=(pl.number!=null&&pl.number!=='')?pl.number:'';
-    h+=`<div class="pl" style="left:${pt.x}%;top:${pt.y}%" title="${esc(pl.name)} · ${esc(pl.position||'')}${num!==''?' · #'+num:''}">
+    const w=wByN[pt.n]||20;
+    h+=`<div class="pl" style="left:${pt.x}%;top:${pt.y}%;width:${w}%" title="${esc(pl.name)} · ${esc(pl.position||'')}${num!==''?' · #'+num:''}">
           <div class="jersey" style="background:${col.j};color:${col.t};border-color:${col.d}">${num}</div>
-          <div class="nm">${esc(pl.name)}</div>
+          <div class="nm">${esc(lastName(pl.name))}</div>
         </div>`;
   });
   return h;
