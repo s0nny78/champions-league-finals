@@ -329,16 +329,15 @@ function layout(formation, side){
   const groups=formation.split(/[^0-9]+/).filter(Boolean).map(Number);
   const rows=[1,...groups];               // GK + lines
   const R=rows.length;
-  const PAD=12;                            // % inset from the touchline for the widest players
   const out=[];
   for(let r=0;r<R;r++){
     const n=rows[r];
-    // y: GK near own goal, last line near halfway
+    // y: GK near own goal; forward line stops short of halfway so the two teams keep a small gap
     const f = R>1 ? r/(R-1) : 0;
-    const y = side==='top' ? (7 + 40*f) : (93 - 40*f);
+    const y = side==='top' ? (7 + 36*f) : (93 - 36*f);
     for(let k=0;k<n;k++){
-      // spread a line across most of the width so dense rows (4–5) get real breathing room
-      let x = n===1 ? 50 : PAD + (100-2*PAD)*(k/(n-1));
+      // compact, evenly-spaced line (players are NOT pushed out to the touchlines)
+      let x = (100/(n+1))*(k+1);
       if(side==='top') x = 100 - x;        // mirror so the two teams face naturally
       out.push({x,y,n});
     }
@@ -349,7 +348,7 @@ function layout(formation, side){
 function renderTeam(team, side){
   const col=COLORS[team.name]||fallback;
   const pts=layout(team.formation, side);
-  const wByN={1:32,2:30,3:26,4:22,5:19,6:16};   // chip width (% of pitch) by players-in-row
+  const wByN={1:30,2:30,3:24,4:19,5:16,6:13};   // chip width (% of pitch) by players-in-row (fits the compact spacing)
   let h='';
   team.startingXI.forEach((pl,i)=>{
     const pt=pts[i]||{x:50,y:side==='top'?10:90,n:1};
