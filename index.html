@@ -3138,41 +3138,46 @@ function lastName(full){
 
 /* every final renders at load — one long page, no view-swapping */
 
-function layout(formation, side){
-  // returns {x,y,n} for the 11 players (index0=GK) in listed order
-  const groups=formation.split(/[^0-9]+/).filter(Boolean).map(Number);
-  const rows=[1,...groups];               // GK + lines
-  const R=rows.length;
-  const out=[];
-  for(let r=0;r<R;r++){
-    const n=rows[r];
-    // y: GK near own goal; forward line stops short of halfway so the two teams keep a small gap
-    const f = R>1 ? r/(R-1) : 0;
-    const y = side==='top' ? (7 + 36*f) : (93 - 36*f);
-    for(let k=0;k<n;k++){
-      // compact, evenly-spaced line (players are NOT pushed out to the touchlines)
-      let x = (100/(n+1))*(k+1);
-      if(side==='top') x = 100 - x;        // mirror so the two teams face naturally
-      out.push({x,y,n});
-    }
-  }
-  return out;
+// map a position code to a lateral lane, from the TEAM's perspective: 0 = right touchline ... 4 = left touchline
+function laneKey(pos){
+  const P={GK:2,
+    RB:0,RWB:0,RM:0,RW:0,RF:0,
+    RCB:1,
+    CB:2,DM:2,CM:2,AM:2,SS:2,CF:2,ST:2,
+    LCB:3,
+    LB:4,LWB:4,LM:4,LW:4,LF:4};
+  const k=P[(pos||'').toUpperCase()];
+  return k===undefined?2:k;
 }
 
 function renderTeam(team, side){
   const col=COLORS[team.name]||fallback;
-  const pts=layout(team.formation, side);
-  const wByN={1:30,2:30,3:24,4:19,5:16,6:13};   // chip width (% of pitch) by players-in-row (fits the compact spacing)
-  let h='';
-  team.startingXI.forEach((pl,i)=>{
-    const pt=pts[i]||{x:50,y:side==='top'?10:90,n:1};
-    const num=(pl.number!=null&&pl.number!=='')?pl.number:'';
-    const w=wByN[pt.n]||20;
-    h+=`<div class="pl" style="left:${pt.x}%;top:${pt.y}%;width:${w}%" title="${esc(pl.name)} · ${esc(pl.position||'')}${num!==''?' · #'+num:''}">
-          <div class="jersey" style="background:${col.j};color:${col.t};border-color:${col.d}">${num}</div>
-          <div class="nm">${esc(lastName(pl.name))}</div>
-        </div>`;
-  });
+  const groups=team.formation.split(/[^0-9]+/).filter(Boolean).map(Number);
+  const lines=[1,...groups];                       // GK line + the outfield lines
+  const R=lines.length;
+  const wByN={1:30,2:30,3:24,4:19,5:16,6:13};       // chip width (% of pitch) by players-in-line
+  const xi=team.startingXI;
+  let h='', idx=0;
+  for(let r=0;r<R;r++){
+    const n=lines[r];
+    const f = R>1 ? r/(R-1) : 0;
+    const y = side==='top' ? (7 + 36*f) : (93 - 36*f);   // GK near own goal; forwards stop short of halfway
+    // order this line by real position, from the team's RIGHT to its LEFT
+    const inLine=xi.slice(idx, idx+n).map((p,i)=>({p,i,lane:laneKey(p.position)}))
+                   .sort((a,b)=>a.lane-b.lane || a.i-b.i);
+    idx+=n;
+    const w=wByN[n]||20;
+    inLine.forEach((o,rank)=>{
+      let x=(100/(n+1))*(rank+1);            // rank 0 = team's right
+      if(side==='bottom') x=100-x;            // mirror the bottom team so the two teams face each other
+      const pl=o.p;
+      const num=(pl.number!=null&&pl.number!=='')?pl.number:'';
+      h+=`<div class="pl" style="left:${x}%;top:${y}%;width:${w}%" title="${esc(pl.name)} · ${esc(pl.position||'')}${num!==''?' · #'+num:''}">
+            <div class="jersey" style="background:${col.j};color:${col.t};border-color:${col.d}">${num}</div>
+            <div class="nm">${esc(lastName(pl.name))}</div>
+          </div>`;
+    });
+  }
   return h;
 }
 
