@@ -114,171 +114,2985 @@
 
 <script>
 const DATA = [
-{year:2000,date:"2000-05-24",venue:"Stade de France",city:"Saint-Denis (Paris)",country:"France",score:"3–0",afterExtraTime:false,penalties:null,
- teamA:{name:"Real Madrid",manager:"Vicente del Bosque",formation:"3-5-2",isWinner:true,startingXI:[
-  {number:27,name:"Iker Casillas",position:"GK"},{number:18,name:"Aitor Karanka",position:"RCB"},{number:15,name:"Iván Helguera",position:"CB"},{number:12,name:"Iván Campo",position:"LCB"},{number:2,name:"Míchel Salgado",position:"RWB"},{number:3,name:"Roberto Carlos",position:"LWB"},{number:6,name:"Fernando Redondo",position:"DM"},{number:8,name:"Steve McManaman",position:"RM"},{number:7,name:"Raúl",position:"LM"},{number:9,name:"Fernando Morientes",position:"CF"},{number:19,name:"Nicolas Anelka",position:"ST"}]},
- teamB:{name:"Valencia",manager:"Héctor Cúper",formation:"4-4-2",isWinner:false,startingXI:[
-  {number:1,name:"Santiago Cañizares",position:"GK"},{number:20,name:"Jocelyn Angloma",position:"RB"},{number:5,name:"Miroslav Đukić",position:"RCB"},{number:2,name:"Mauricio Pellegrino",position:"LCB"},{number:31,name:"Gerardo García León",position:"LB"},{number:6,name:"Gaizka Mendieta",position:"RM"},{number:8,name:"Javier Farinós",position:"DM"},{number:14,name:"Gerard López",position:"CM"},{number:18,name:"Kily González",position:"LM"},{number:10,name:"Miguel Ángel Angulo",position:"CF"},{number:7,name:"Claudio López",position:"ST"}]},
- scorers:["Morientes 39'","McManaman 67'","Raúl 75'"],
- notes:"Real Madrid's 8th European Cup; Casillas, 19, became the youngest goalkeeper to win a final. Real's shape is recorded as 3-5-2 by UEFA/Transfermarkt (Wikipedia's diagram shows a 4-4-2)."},
-
-{year:2001,date:"2001-05-23",venue:"San Siro",city:"Milan",country:"Italy",score:"1–1",afterExtraTime:true,penalties:"5–4",
- teamA:{name:"Bayern Munich",manager:"Ottmar Hitzfeld",formation:"5-3-2",isWinner:true,startingXI:[
-  {number:1,name:"Oliver Kahn",position:"GK"},{number:4,name:"Samuel Kuffour",position:"RCB"},{number:5,name:"Patrik Andersson",position:"CB"},{number:25,name:"Thomas Linke",position:"LCB"},{number:2,name:"Willy Sagnol",position:"RWB"},{number:3,name:"Bixente Lizarazu",position:"LWB"},{number:23,name:"Owen Hargreaves",position:"DM"},{number:20,name:"Hasan Salihamidžić",position:"RM"},{number:11,name:"Stefan Effenberg",position:"CM"},{number:7,name:"Mehmet Scholl",position:"LM"},{number:9,name:"Giovane Élber",position:"ST"}]},
- teamB:{name:"Valencia",manager:"Héctor Cúper",formation:"4-4-2",isWinner:false,startingXI:[
-  {number:1,name:"Santiago Cañizares",position:"GK"},{number:20,name:"Jocelyn Angloma",position:"RB"},{number:12,name:"Roberto Ayala",position:"RCB"},{number:2,name:"Mauricio Pellegrino",position:"LCB"},{number:15,name:"Amedeo Carboni",position:"LB"},{number:6,name:"Gaizka Mendieta",position:"RM"},{number:19,name:"Rubén Baraja",position:"CM"},{number:18,name:"Kily González",position:"LM"},{number:35,name:"Pablo Aimar",position:"AM"},{number:17,name:"Juan Sánchez",position:"CF"},{number:7,name:"John Carew",position:"ST"}]},
- scorers:["Mendieta 3' (pen.)","Effenberg 50' (pen.)"],
- notes:"1–1 after extra time; Bayern won 5–4 on penalties for a 4th European Cup, ending a 25-year wait. Oliver Kahn was the shootout hero. Valencia lost a second straight final."},
-
-{year:2002,date:"2002-05-15",venue:"Hampden Park",city:"Glasgow",country:"Scotland",score:"2–1",afterExtraTime:false,penalties:null,
- teamA:{name:"Real Madrid",manager:"Vicente del Bosque",formation:"4-3-1-2",isWinner:true,startingXI:[
-  {number:1,name:"César Sánchez",position:"GK"},{number:2,name:"Míchel Salgado",position:"RB"},{number:4,name:"Fernando Hierro",position:"RCB"},{number:6,name:"Iván Helguera",position:"LCB"},{number:3,name:"Roberto Carlos",position:"LB"},{number:24,name:"Claude Makélélé",position:"DM"},{number:10,name:"Luís Figo",position:"RM"},{number:21,name:"Santiago Solari",position:"LM"},{number:5,name:"Zinedine Zidane",position:"AM"},{number:7,name:"Raúl",position:"CF"},{number:9,name:"Fernando Morientes",position:"ST"}]},
- teamB:{name:"Bayer Leverkusen",manager:"Klaus Toppmöller",formation:"4-2-3-1",isWinner:false,startingXI:[
-  {number:1,name:"Hans-Jörg Butt",position:"GK"},{number:26,name:"Zoltán Sebescen",position:"RB"},{number:6,name:"Boris Živković",position:"RCB"},{number:19,name:"Lúcio",position:"LCB"},{number:35,name:"Diego Placente",position:"LB"},{number:28,name:"Carsten Ramelow",position:"DM"},{number:25,name:"Bernd Schneider",position:"CM"},{number:13,name:"Michael Ballack",position:"CM"},{number:23,name:"Yıldıray Baştürk",position:"AM"},{number:10,name:"Thomas Brdarić",position:"RW"},{number:27,name:"Oliver Neuville",position:"ST"}]},
- scorers:["Raúl 8'","Lúcio 13'","Zidane 45'"],
- notes:"'La Novena' (9th European Cup). Zidane's left-foot volley is rated among the greatest goals in final history; Casillas replaced the injured César and made decisive saves."},
-
-{year:2003,date:"2003-05-28",venue:"Old Trafford",city:"Manchester",country:"England",score:"0–0",afterExtraTime:true,penalties:"3–2",
- teamA:{name:"AC Milan",manager:"Carlo Ancelotti",formation:"4-3-1-2",isWinner:true,startingXI:[
-  {number:12,name:"Dida",position:"GK"},{number:19,name:"Alessandro Costacurta",position:"RB"},{number:13,name:"Alessandro Nesta",position:"RCB"},{number:3,name:"Paolo Maldini",position:"LCB"},{number:4,name:"Kakha Kaladze",position:"LB"},{number:8,name:"Gennaro Gattuso",position:"CM"},{number:21,name:"Andrea Pirlo",position:"DM"},{number:20,name:"Clarence Seedorf",position:"CM"},{number:10,name:"Manuel Rui Costa",position:"AM"},{number:7,name:"Andriy Shevchenko",position:"CF"},{number:9,name:"Filippo Inzaghi",position:"CF"}]},
- teamB:{name:"Juventus",manager:"Marcello Lippi",formation:"4-4-2",isWinner:false,startingXI:[
-  {number:1,name:"Gianluigi Buffon",position:"GK"},{number:21,name:"Lilian Thuram",position:"RB"},{number:2,name:"Ciro Ferrara",position:"RCB"},{number:5,name:"Igor Tudor",position:"LCB"},{number:4,name:"Paolo Montero",position:"LB"},{number:16,name:"Mauro Camoranesi",position:"RM"},{number:3,name:"Alessio Tacchinardi",position:"CM"},{number:26,name:"Edgar Davids",position:"CM"},{number:19,name:"Gianluca Zambrotta",position:"LM"},{number:10,name:"Alessandro Del Piero",position:"CF"},{number:17,name:"David Trezeguet",position:"CF"}]},
- scorers:[],
- notes:"Goalless after 120 minutes; AC Milan won the shootout 3–2 for a 6th European Cup. All-Italian final; Milan's Rui Costa played as a trequartista behind Shevchenko and Inzaghi."},
-
-{year:2004,date:"2004-05-26",venue:"Arena AufSchalke",city:"Gelsenkirchen",country:"Germany",score:"3–0",afterExtraTime:false,penalties:null,
- teamA:{name:"FC Porto",manager:"José Mourinho",formation:"4-3-3",isWinner:true,startingXI:[
-  {number:99,name:"Vítor Baía",position:"GK"},{number:22,name:"Paulo Ferreira",position:"RB"},{number:2,name:"Jorge Costa",position:"RCB"},{number:4,name:"Ricardo Carvalho",position:"LCB"},{number:8,name:"Nuno Valente",position:"LB"},{number:6,name:"Costinha",position:"DM"},{number:18,name:"Maniche",position:"CM"},{number:23,name:"Pedro Mendes",position:"CM"},{number:10,name:"Deco",position:"AM"},{number:19,name:"Carlos Alberto",position:"CF"},{number:11,name:"Derlei",position:"CF"}]},
- teamB:{name:"AS Monaco",manager:"Didier Deschamps",formation:"4-3-3",isWinner:false,startingXI:[
-  {number:1,name:"Flávio Roma",position:"GK"},{number:4,name:"Hugo Ibarra",position:"RB"},{number:27,name:"Julien Rodriguez",position:"RCB"},{number:32,name:"Gaël Givet",position:"LCB"},{number:3,name:"Patrice Evra",position:"LB"},{number:7,name:"Lucas Bernardi",position:"CM"},{number:15,name:"Akis Zikos",position:"DM"},{number:14,name:"Édouard Cissé",position:"CM"},{number:8,name:"Ludovic Giuly",position:"RW"},{number:25,name:"Jérôme Rothen",position:"LW"},{number:10,name:"Fernando Morientes",position:"CF"}]},
- scorers:["Carlos Alberto 39'","Deco 71'","Alenichev 75'"],
- notes:"Porto won 3–0; Mourinho left for Chelsea days later. Monaco captain Giuly went off injured in the first half; Morientes was on loan from Real Madrid."},
-
-{year:2005,date:"2005-05-25",venue:"Atatürk Olympic Stadium",city:"Istanbul",country:"Turkey",score:"3–3",afterExtraTime:true,penalties:"3–2",
- teamA:{name:"Liverpool",manager:"Rafael Benítez",formation:"4-4-1-1",isWinner:true,startingXI:[
-  {number:1,name:"Jerzy Dudek",position:"GK"},{number:3,name:"Steve Finnan",position:"RB"},{number:23,name:"Jamie Carragher",position:"RCB"},{number:4,name:"Sami Hyypiä",position:"LCB"},{number:21,name:"Djimi Traoré",position:"LB"},{number:10,name:"Luis García",position:"RM"},{number:14,name:"Xabi Alonso",position:"CM"},{number:8,name:"Steven Gerrard",position:"CM"},{number:6,name:"John Arne Riise",position:"LM"},{number:7,name:"Harry Kewell",position:"AM"},{number:5,name:"Milan Baroš",position:"CF"}]},
- teamB:{name:"AC Milan",manager:"Carlo Ancelotti",formation:"4-3-1-2",isWinner:false,startingXI:[
-  {number:1,name:"Dida",position:"GK"},{number:2,name:"Cafu",position:"RB"},{number:31,name:"Jaap Stam",position:"RCB"},{number:13,name:"Alessandro Nesta",position:"LCB"},{number:3,name:"Paolo Maldini",position:"LB"},{number:8,name:"Gennaro Gattuso",position:"CM"},{number:21,name:"Andrea Pirlo",position:"DM"},{number:20,name:"Clarence Seedorf",position:"CM"},{number:22,name:"Kaká",position:"AM"},{number:7,name:"Andriy Shevchenko",position:"CF"},{number:11,name:"Hernán Crespo",position:"CF"}]},
- scorers:["Maldini 1'","Crespo 39'","Crespo 44'","Gerrard 54'","Šmicer 56'","Xabi Alonso 60'"],
- notes:"The Miracle of Istanbul: 3–0 down at half-time, Liverpool levelled in six second-half minutes and won 3–2 on penalties (Dudek saved from Shevchenko). Kewell went off injured early."},
-
-{year:2006,date:"2006-05-17",venue:"Stade de France",city:"Saint-Denis (Paris)",country:"France",score:"2–1",afterExtraTime:false,penalties:null,
- teamA:{name:"Barcelona",manager:"Frank Rijkaard",formation:"4-3-3",isWinner:true,startingXI:[
-  {number:1,name:"Víctor Valdés",position:"GK"},{number:23,name:"Oleguer Presas",position:"RB"},{number:4,name:"Rafael Márquez",position:"RCB"},{number:5,name:"Carles Puyol",position:"LCB"},{number:12,name:"Giovanni van Bronckhorst",position:"LB"},{number:15,name:"Edmílson",position:"DM"},{number:20,name:"Deco",position:"CM"},{number:17,name:"Mark van Bommel",position:"CM"},{number:8,name:"Ludovic Giuly",position:"RW"},{number:10,name:"Ronaldinho",position:"LW"},{number:9,name:"Samuel Eto'o",position:"CF"}]},
- teamB:{name:"Arsenal",manager:"Arsène Wenger",formation:"4-4-1-1",isWinner:false,startingXI:[
-  {number:1,name:"Jens Lehmann",position:"GK"},{number:27,name:"Emmanuel Eboué",position:"RB"},{number:28,name:"Kolo Touré",position:"RCB"},{number:23,name:"Sol Campbell",position:"LCB"},{number:3,name:"Ashley Cole",position:"LB"},{number:7,name:"Robert Pirès",position:"RM"},{number:19,name:"Gilberto Silva",position:"CM"},{number:15,name:"Cesc Fàbregas",position:"CM"},{number:13,name:"Alexander Hleb",position:"LM"},{number:8,name:"Freddie Ljungberg",position:"SS"},{number:14,name:"Thierry Henry",position:"CF"}]},
- scorers:["Campbell 37'","Eto'o 76'","Belletti 80'"],
- notes:"Arsenal keeper Lehmann was sent off on 18' (the first red card in a European Cup final); Pirès was withdrawn for sub keeper Almunia. The XI shown is who started."},
-
-{year:2007,date:"2007-05-23",venue:"Olympic Stadium (Spyros Louis)",city:"Athens",country:"Greece",score:"2–1",afterExtraTime:false,penalties:null,
- teamA:{name:"AC Milan",manager:"Carlo Ancelotti",formation:"4-3-2-1",isWinner:true,startingXI:[
-  {number:1,name:"Dida",position:"GK"},{number:44,name:"Massimo Oddo",position:"RB"},{number:13,name:"Alessandro Nesta",position:"RCB"},{number:3,name:"Paolo Maldini",position:"LCB"},{number:18,name:"Marek Jankulovski",position:"LB"},{number:8,name:"Gennaro Gattuso",position:"CM"},{number:21,name:"Andrea Pirlo",position:"DM"},{number:23,name:"Massimo Ambrosini",position:"CM"},{number:10,name:"Clarence Seedorf",position:"AM"},{number:22,name:"Kaká",position:"AM"},{number:9,name:"Filippo Inzaghi",position:"CF"}]},
- teamB:{name:"Liverpool",manager:"Rafael Benítez",formation:"4-2-3-1",isWinner:false,startingXI:[
-  {number:25,name:"José Reina",position:"GK"},{number:3,name:"Steve Finnan",position:"RB"},{number:23,name:"Jamie Carragher",position:"RCB"},{number:5,name:"Daniel Agger",position:"LCB"},{number:6,name:"John Arne Riise",position:"LB"},{number:14,name:"Xabi Alonso",position:"DM"},{number:20,name:"Javier Mascherano",position:"DM"},{number:16,name:"Jermaine Pennant",position:"RM"},{number:32,name:"Boudewijn Zenden",position:"LM"},{number:8,name:"Steven Gerrard",position:"AM"},{number:18,name:"Dirk Kuyt",position:"CF"}]},
- scorers:["Inzaghi 45'","Inzaghi 82'","Kuyt 89'"],
- notes:"Rematch of 2005. Milan's 'Christmas tree' 4-3-2-1 avenged Istanbul; they fielded the oldest starting XI in a final (avg ~31)."},
-{year:2008,date:"2008-05-21",venue:"Luzhniki Stadium",city:"Moscow",country:"Russia",score:"1–1",afterExtraTime:true,penalties:"6–5",
- teamA:{name:"Manchester United",manager:"Sir Alex Ferguson",formation:"4-4-2",isWinner:true,startingXI:[
-  {number:1,name:"Edwin van der Sar",position:"GK"},{number:6,name:"Wes Brown",position:"RB"},{number:5,name:"Rio Ferdinand",position:"RCB"},{number:15,name:"Nemanja Vidić",position:"LCB"},{number:3,name:"Patrice Evra",position:"LB"},{number:4,name:"Owen Hargreaves",position:"RM"},{number:18,name:"Paul Scholes",position:"CM"},{number:16,name:"Michael Carrick",position:"CM"},{number:7,name:"Cristiano Ronaldo",position:"LM"},{number:10,name:"Wayne Rooney",position:"CF"},{number:32,name:"Carlos Tévez",position:"CF"}]},
- teamB:{name:"Chelsea",manager:"Avram Grant",formation:"4-3-3",isWinner:false,startingXI:[
-  {number:1,name:"Petr Čech",position:"GK"},{number:5,name:"Michael Essien",position:"RB"},{number:6,name:"Ricardo Carvalho",position:"RCB"},{number:26,name:"John Terry",position:"LCB"},{number:3,name:"Ashley Cole",position:"LB"},{number:4,name:"Claude Makélélé",position:"DM"},{number:13,name:"Michael Ballack",position:"CM"},{number:8,name:"Frank Lampard",position:"CM"},{number:10,name:"Joe Cole",position:"RW"},{number:15,name:"Florent Malouda",position:"LW"},{number:11,name:"Didier Drogba",position:"CF"}]},
- scorers:["Ronaldo 26'","Lampard 45+'"],
- notes:"1–1 after extra time; United won 6–5 on penalties (Ronaldo missed, Terry slipped, Van der Sar saved from Anelka). Drogba was sent off in extra time; Essien started at right-back."},
-
-{year:2009,date:"2009-05-27",venue:"Stadio Olimpico",city:"Rome",country:"Italy",score:"2–0",afterExtraTime:false,penalties:null,
- teamA:{name:"Barcelona",manager:"Pep Guardiola",formation:"4-3-3",isWinner:true,startingXI:[
-  {number:1,name:"Víctor Valdés",position:"GK"},{number:5,name:"Carles Puyol",position:"RB"},{number:3,name:"Gerard Piqué",position:"RCB"},{number:24,name:"Yaya Touré",position:"LCB"},{number:16,name:"Sylvinho",position:"LB"},{number:6,name:"Xavi",position:"CM"},{number:28,name:"Sergio Busquets",position:"DM"},{number:8,name:"Andrés Iniesta",position:"CM"},{number:9,name:"Samuel Eto'o",position:"RW"},{number:10,name:"Lionel Messi",position:"CF"},{number:14,name:"Thierry Henry",position:"LW"}]},
- teamB:{name:"Manchester United",manager:"Sir Alex Ferguson",formation:"4-4-2",isWinner:false,startingXI:[
-  {number:1,name:"Edwin van der Sar",position:"GK"},{number:22,name:"John O'Shea",position:"RB"},{number:5,name:"Rio Ferdinand",position:"RCB"},{number:15,name:"Nemanja Vidić",position:"LCB"},{number:3,name:"Patrice Evra",position:"LB"},{number:7,name:"Cristiano Ronaldo",position:"RM"},{number:16,name:"Michael Carrick",position:"CM"},{number:8,name:"Anderson",position:"CM"},{number:13,name:"Park Ji-sung",position:"LM"},{number:11,name:"Ryan Giggs",position:"CF"},{number:10,name:"Wayne Rooney",position:"CF"}]},
- scorers:["Eto'o 10'","Messi 70'"],
- notes:"Barça fielded a makeshift back line — Alves & Abidal suspended, Márquez injured — so Puyol played right-back, Yaya Touré at centre-back and Sylvinho at left-back. Guardiola's first European Cup."},
-
-{year:2010,date:"2010-05-22",venue:"Santiago Bernabéu",city:"Madrid",country:"Spain",score:"2–0",afterExtraTime:false,penalties:null,
- teamA:{name:"Inter Milan",manager:"José Mourinho",formation:"4-2-3-1",isWinner:true,startingXI:[
-  {number:12,name:"Júlio César",position:"GK"},{number:13,name:"Maicon",position:"RB"},{number:6,name:"Lúcio",position:"RCB"},{number:25,name:"Walter Samuel",position:"LCB"},{number:26,name:"Cristian Chivu",position:"LB"},{number:4,name:"Javier Zanetti",position:"DM"},{number:19,name:"Esteban Cambiasso",position:"DM"},{number:9,name:"Samuel Eto'o",position:"RM"},{number:10,name:"Wesley Sneijder",position:"AM"},{number:27,name:"Goran Pandev",position:"LM"},{number:22,name:"Diego Milito",position:"ST"}]},
- teamB:{name:"Bayern Munich",manager:"Louis van Gaal",formation:"4-2-3-1",isWinner:false,startingXI:[
-  {number:22,name:"Hans-Jörg Butt",position:"GK"},{number:21,name:"Philipp Lahm",position:"RB"},{number:5,name:"Daniel Van Buyten",position:"RCB"},{number:6,name:"Martín Demichelis",position:"LCB"},{number:28,name:"Holger Badstuber",position:"LB"},{number:17,name:"Mark van Bommel",position:"DM"},{number:31,name:"Bastian Schweinsteiger",position:"DM"},{number:10,name:"Arjen Robben",position:"RW"},{number:25,name:"Thomas Müller",position:"AM"},{number:8,name:"Hamit Altıntop",position:"LW"},{number:11,name:"Ivica Olić",position:"ST"}]},
- scorers:["Milito 35'","Milito 70'"],
- notes:"At the Bernabéu, Inter completed the treble under Mourinho; Diego Milito scored both goals."},
-
-{year:2011,date:"2011-05-28",venue:"Wembley Stadium",city:"London",country:"England",score:"3–1",afterExtraTime:false,penalties:null,
- teamA:{name:"Barcelona",manager:"Pep Guardiola",formation:"4-3-3",isWinner:true,startingXI:[
-  {number:1,name:"Víctor Valdés",position:"GK"},{number:2,name:"Dani Alves",position:"RB"},{number:3,name:"Gerard Piqué",position:"RCB"},{number:14,name:"Javier Mascherano",position:"LCB"},{number:22,name:"Éric Abidal",position:"LB"},{number:6,name:"Xavi",position:"CM"},{number:16,name:"Sergio Busquets",position:"DM"},{number:8,name:"Andrés Iniesta",position:"CM"},{number:17,name:"Pedro",position:"RW"},{number:10,name:"Lionel Messi",position:"CF"},{number:7,name:"David Villa",position:"LW"}]},
- teamB:{name:"Manchester United",manager:"Sir Alex Ferguson",formation:"4-4-2",isWinner:false,startingXI:[
-  {number:1,name:"Edwin van der Sar",position:"GK"},{number:20,name:"Fábio",position:"RB"},{number:5,name:"Rio Ferdinand",position:"RCB"},{number:15,name:"Nemanja Vidić",position:"LCB"},{number:3,name:"Patrice Evra",position:"LB"},{number:25,name:"Antonio Valencia",position:"RM"},{number:16,name:"Michael Carrick",position:"CM"},{number:11,name:"Ryan Giggs",position:"CM"},{number:13,name:"Park Ji-sung",position:"LM"},{number:14,name:"Javier Hernández",position:"CF"},{number:10,name:"Wayne Rooney",position:"SS"}]},
- scorers:["Pedro 27'","Rooney 34'","Messi 54'","Villa 69'"],
- notes:"At Wembley. Abidal started at left-back months after liver surgery; captain Puyol came on only as a late substitute (did not start). Mascherano partnered Piqué in central defence."},
-
-{year:2012,date:"2012-05-19",venue:"Allianz Arena",city:"Munich",country:"Germany",score:"1–1",afterExtraTime:true,penalties:"4–3",
- teamA:{name:"Chelsea",manager:"Roberto Di Matteo",formation:"4-2-3-1",isWinner:true,startingXI:[
-  {number:1,name:"Petr Čech",position:"GK"},{number:17,name:"José Bosingwa",position:"RB"},{number:4,name:"David Luiz",position:"RCB"},{number:24,name:"Gary Cahill",position:"LCB"},{number:3,name:"Ashley Cole",position:"LB"},{number:12,name:"John Obi Mikel",position:"DM"},{number:8,name:"Frank Lampard",position:"CM"},{number:21,name:"Salomon Kalou",position:"RM"},{number:10,name:"Juan Mata",position:"AM"},{number:34,name:"Ryan Bertrand",position:"LM"},{number:11,name:"Didier Drogba",position:"CF"}]},
- teamB:{name:"Bayern Munich",manager:"Jupp Heynckes",formation:"4-2-3-1",isWinner:false,startingXI:[
-  {number:1,name:"Manuel Neuer",position:"GK"},{number:21,name:"Philipp Lahm",position:"RB"},{number:17,name:"Jérôme Boateng",position:"RCB"},{number:44,name:"Anatoliy Tymoshchuk",position:"LCB"},{number:26,name:"Diego Contento",position:"LB"},{number:31,name:"Bastian Schweinsteiger",position:"DM"},{number:39,name:"Toni Kroos",position:"DM"},{number:10,name:"Arjen Robben",position:"RW"},{number:25,name:"Thomas Müller",position:"AM"},{number:7,name:"Franck Ribéry",position:"LW"},{number:33,name:"Mario Gómez",position:"CF"}]},
- scorers:["Müller 83'","Drogba 88'"],
- notes:"At Bayern's own stadium; 1–1 after extra time, Chelsea won 4–3 on penalties (Drogba's the decisive kick) for their first European Cup."},
-
-{year:2013,date:"2013-05-25",venue:"Wembley Stadium",city:"London",country:"England",score:"2–1",afterExtraTime:false,penalties:null,
- teamA:{name:"Bayern Munich",manager:"Jupp Heynckes",formation:"4-2-3-1",isWinner:true,startingXI:[
-  {number:1,name:"Manuel Neuer",position:"GK"},{number:21,name:"Philipp Lahm",position:"RB"},{number:17,name:"Jérôme Boateng",position:"RCB"},{number:4,name:"Dante",position:"LCB"},{number:27,name:"David Alaba",position:"LB"},{number:8,name:"Javi Martínez",position:"DM"},{number:31,name:"Bastian Schweinsteiger",position:"DM"},{number:10,name:"Arjen Robben",position:"RW"},{number:25,name:"Thomas Müller",position:"AM"},{number:7,name:"Franck Ribéry",position:"LW"},{number:9,name:"Mario Mandžukić",position:"CF"}]},
- teamB:{name:"Borussia Dortmund",manager:"Jürgen Klopp",formation:"4-2-3-1",isWinner:false,startingXI:[
-  {number:1,name:"Roman Weidenfeller",position:"GK"},{number:26,name:"Łukasz Piszczek",position:"RB"},{number:4,name:"Neven Subotić",position:"RCB"},{number:15,name:"Mats Hummels",position:"LCB"},{number:29,name:"Marcel Schmelzer",position:"LB"},{number:6,name:"Sven Bender",position:"DM"},{number:8,name:"İlkay Gündoğan",position:"DM"},{number:16,name:"Jakub Błaszczykowski",position:"RM"},{number:11,name:"Marco Reus",position:"AM"},{number:19,name:"Kevin Großkreutz",position:"LM"},{number:9,name:"Robert Lewandowski",position:"CF"}]},
- scorers:["Mandžukić 60'","Gündoğan 68' (pen.)","Robben 89'"],
- notes:"The first all-German final. Robben scored the late winner; Gündoğan had equalised from the penalty spot."},
-
-{year:2014,date:"2014-05-24",venue:"Estádio da Luz",city:"Lisbon",country:"Portugal",score:"4–1",afterExtraTime:true,penalties:null,
- teamA:{name:"Real Madrid",manager:"Carlo Ancelotti",formation:"4-3-3",isWinner:true,startingXI:[
-  {number:1,name:"Iker Casillas",position:"GK"},{number:15,name:"Dani Carvajal",position:"RB"},{number:2,name:"Raphaël Varane",position:"RCB"},{number:4,name:"Sergio Ramos",position:"LCB"},{number:5,name:"Fábio Coentrão",position:"LB"},{number:19,name:"Luka Modrić",position:"CM"},{number:6,name:"Sami Khedira",position:"DM"},{number:22,name:"Ángel Di María",position:"CM"},{number:11,name:"Gareth Bale",position:"RW"},{number:9,name:"Karim Benzema",position:"CF"},{number:7,name:"Cristiano Ronaldo",position:"LW"}]},
- teamB:{name:"Atlético Madrid",manager:"Diego Simeone",formation:"4-4-2",isWinner:false,startingXI:[
-  {number:13,name:"Thibaut Courtois",position:"GK"},{number:20,name:"Juanfran",position:"RB"},{number:2,name:"Diego Godín",position:"RCB"},{number:23,name:"Miranda",position:"LCB"},{number:3,name:"Filipe Luís",position:"LB"},{number:8,name:"Raúl García",position:"RM"},{number:5,name:"Tiago",position:"CM"},{number:14,name:"Gabi",position:"CM"},{number:6,name:"Koke",position:"LM"},{number:19,name:"Diego Costa",position:"ST"},{number:9,name:"David Villa",position:"ST"}]},
- scorers:["Godín 36'","Ramos 90+3'","Bale 110'","Marcelo 118'","Ronaldo 120' (pen.)"],
- notes:"'La Décima' (10th European Cup). Ramos equalised deep in stoppage time (90+3'); Real then scored three times in extra time. Courtois started in goal on loan from Chelsea; Diego Costa limped off on 9'."},
-{year:2015,date:"2015-06-06",venue:"Olympiastadion",city:"Berlin",country:"Germany",score:"3–1",afterExtraTime:false,penalties:null,
- teamA:{name:"Barcelona",manager:"Luis Enrique",formation:"4-3-3",isWinner:true,startingXI:[
-  {number:1,name:"Marc-André ter Stegen",position:"GK"},{number:22,name:"Dani Alves",position:"RB"},{number:3,name:"Gerard Piqué",position:"RCB"},{number:14,name:"Javier Mascherano",position:"LCB"},{number:18,name:"Jordi Alba",position:"LB"},{number:5,name:"Sergio Busquets",position:"DM"},{number:4,name:"Ivan Rakitić",position:"CM"},{number:8,name:"Andrés Iniesta",position:"CM"},{number:10,name:"Lionel Messi",position:"RW"},{number:9,name:"Luis Suárez",position:"CF"},{number:11,name:"Neymar",position:"LW"}]},
- teamB:{name:"Juventus",manager:"Massimiliano Allegri",formation:"4-2-3-1",isWinner:false,startingXI:[
-  {number:1,name:"Gianluigi Buffon",position:"GK"},{number:26,name:"Stephan Lichtsteiner",position:"RB"},{number:15,name:"Andrea Barzagli",position:"RCB"},{number:19,name:"Leonardo Bonucci",position:"LCB"},{number:33,name:"Patrice Evra",position:"LB"},{number:8,name:"Claudio Marchisio",position:"DM"},{number:21,name:"Andrea Pirlo",position:"DM"},{number:23,name:"Arturo Vidal",position:"AM"},{number:10,name:"Carlos Tévez",position:"RW"},{number:6,name:"Paul Pogba",position:"LW"},{number:9,name:"Álvaro Morata",position:"ST"}]},
- scorers:["Rakitić 4'","Morata 55'","Suárez 68'","Neymar 97'"],
- notes:"Barça's second treble, powered by the 'MSN' front three. Juventus lined up 4-2-3-1 with Vidal behind Morata and Tévez/Pogba wide."},
-
-{year:2016,date:"2016-05-28",venue:"San Siro",city:"Milan",country:"Italy",score:"1–1",afterExtraTime:true,penalties:"5–3",
- teamA:{name:"Real Madrid",manager:"Zinedine Zidane",formation:"4-3-3",isWinner:true,startingXI:[
-  {number:1,name:"Keylor Navas",position:"GK"},{number:15,name:"Dani Carvajal",position:"RB"},{number:4,name:"Sergio Ramos",position:"RCB"},{number:3,name:"Pepe",position:"LCB"},{number:12,name:"Marcelo",position:"LB"},{number:14,name:"Casemiro",position:"DM"},{number:8,name:"Toni Kroos",position:"CM"},{number:19,name:"Luka Modrić",position:"CM"},{number:11,name:"Gareth Bale",position:"RW"},{number:9,name:"Karim Benzema",position:"CF"},{number:7,name:"Cristiano Ronaldo",position:"LW"}]},
- teamB:{name:"Atlético Madrid",manager:"Diego Simeone",formation:"4-4-2",isWinner:false,startingXI:[
-  {number:13,name:"Jan Oblak",position:"GK"},{number:20,name:"Juanfran",position:"RB"},{number:15,name:"Stefan Savić",position:"RCB"},{number:2,name:"Diego Godín",position:"LCB"},{number:3,name:"Filipe Luís",position:"LB"},{number:6,name:"Koke",position:"RM"},{number:5,name:"Augusto Fernández",position:"CM"},{number:14,name:"Gabi",position:"CM"},{number:8,name:"Saúl",position:"LM"},{number:7,name:"Antoine Griezmann",position:"SS"},{number:9,name:"Fernando Torres",position:"ST"}]},
- scorers:["Ramos 15'","Carrasco 79'"],
- notes:"1–1 after extra time; Real won the shootout 5–3 (Juanfran missed, Ronaldo scored the decider) — 'La Undécima'. Atlético's equaliser came from substitute Yannick Carrasco."},
-
-{year:2017,date:"2017-06-03",venue:"Millennium Stadium",city:"Cardiff",country:"Wales",score:"4–1",afterExtraTime:false,penalties:null,
- teamA:{name:"Real Madrid",manager:"Zinedine Zidane",formation:"4-3-3",isWinner:true,startingXI:[
-  {number:1,name:"Keylor Navas",position:"GK"},{number:2,name:"Dani Carvajal",position:"RB"},{number:4,name:"Sergio Ramos",position:"RCB"},{number:5,name:"Raphaël Varane",position:"LCB"},{number:12,name:"Marcelo",position:"LB"},{number:14,name:"Casemiro",position:"DM"},{number:8,name:"Toni Kroos",position:"CM"},{number:10,name:"Luka Modrić",position:"CM"},{number:22,name:"Isco",position:"RW"},{number:9,name:"Karim Benzema",position:"CF"},{number:7,name:"Cristiano Ronaldo",position:"LW"}]},
- teamB:{name:"Juventus",manager:"Massimiliano Allegri",formation:"3-5-2",isWinner:false,startingXI:[
-  {number:1,name:"Gianluigi Buffon",position:"GK"},{number:15,name:"Andrea Barzagli",position:"RCB"},{number:19,name:"Leonardo Bonucci",position:"CB"},{number:3,name:"Giorgio Chiellini",position:"LCB"},{number:23,name:"Dani Alves",position:"RWB"},{number:5,name:"Miralem Pjanić",position:"CM"},{number:6,name:"Sami Khedira",position:"CM"},{number:12,name:"Alex Sandro",position:"LWB"},{number:21,name:"Paulo Dybala",position:"AM"},{number:9,name:"Gonzalo Higuaín",position:"ST"},{number:17,name:"Mario Mandžukić",position:"ST"}]},
- scorers:["Ronaldo 20'","Mandžukić 27'","Casemiro 61'","Ronaldo 64'","Asensio 90'"],
- notes:"Real became the first club to retain the Champions League. Juventus used a back three (Barzagli, Bonucci, Chiellini) with Alves and Alex Sandro as wing-backs; Real's 4th was scored by sub Asensio."},
-
-{year:2018,date:"2018-05-26",venue:"NSC Olimpiyskiy Stadium",city:"Kyiv",country:"Ukraine",score:"3–1",afterExtraTime:false,penalties:null,
- teamA:{name:"Real Madrid",manager:"Zinedine Zidane",formation:"4-3-3",isWinner:true,startingXI:[
-  {number:1,name:"Keylor Navas",position:"GK"},{number:2,name:"Dani Carvajal",position:"RB"},{number:5,name:"Raphaël Varane",position:"RCB"},{number:4,name:"Sergio Ramos",position:"LCB"},{number:12,name:"Marcelo",position:"LB"},{number:14,name:"Casemiro",position:"DM"},{number:10,name:"Luka Modrić",position:"CM"},{number:8,name:"Toni Kroos",position:"CM"},{number:22,name:"Isco",position:"AM"},{number:9,name:"Karim Benzema",position:"CF"},{number:7,name:"Cristiano Ronaldo",position:"LW"}]},
- teamB:{name:"Liverpool",manager:"Jürgen Klopp",formation:"4-3-3",isWinner:false,startingXI:[
-  {number:1,name:"Loris Karius",position:"GK"},{number:66,name:"Trent Alexander-Arnold",position:"RB"},{number:6,name:"Dejan Lovren",position:"RCB"},{number:4,name:"Virgil van Dijk",position:"LCB"},{number:26,name:"Andrew Robertson",position:"LB"},{number:14,name:"Jordan Henderson",position:"DM"},{number:7,name:"James Milner",position:"CM"},{number:5,name:"Georginio Wijnaldum",position:"CM"},{number:11,name:"Mohamed Salah",position:"RW"},{number:9,name:"Roberto Firmino",position:"CF"},{number:19,name:"Sadio Mané",position:"LW"}]},
- scorers:["Benzema 51'","Mané 55'","Bale 64'","Bale 83'"],
- notes:"Real's third consecutive title. Salah went off injured on 30'; both Bale goals (including an overhead kick) came as a substitute, and keeper Karius made two costly errors."},
-
-{year:2019,date:"2019-06-01",venue:"Estadio Metropolitano",city:"Madrid",country:"Spain",score:"2–0",afterExtraTime:false,penalties:null,
- teamA:{name:"Liverpool",manager:"Jürgen Klopp",formation:"4-3-3",isWinner:true,startingXI:[
-  {number:13,name:"Alisson",position:"GK"},{number:66,name:"Trent Alexander-Arnold",position:"RB"},{number:32,name:"Joël Matip",position:"RCB"},{number:4,name:"Virgil van Dijk",position:"LCB"},{number:26,name:"Andrew Robertson",position:"LB"},{number:14,name:"Jordan Henderson",position:"CM"},{number:3,name:"Fabinho",position:"DM"},{number:5,name:"Georginio Wijnaldum",position:"CM"},{number:11,name:"Mohamed Salah",position:"RW"},{number:9,name:"Roberto Firmino",position:"CF"},{number:10,name:"Sadio Mané",position:"LW"}]},
- teamB:{name:"Tottenham Hotspur",manager:"Mauricio Pochettino",formation:"4-2-3-1",isWinner:false,startingXI:[
-  {number:1,name:"Hugo Lloris",position:"GK"},{number:2,name:"Kieran Trippier",position:"RB"},{number:4,name:"Toby Alderweireld",position:"RCB"},{number:5,name:"Jan Vertonghen",position:"LCB"},{number:3,name:"Danny Rose",position:"LB"},{number:8,name:"Harry Winks",position:"DM"},{number:17,name:"Moussa Sissoko",position:"DM"},{number:7,name:"Son Heung-min",position:"RW"},{number:23,name:"Christian Eriksen",position:"AM"},{number:20,name:"Dele Alli",position:"LW"},{number:10,name:"Harry Kane",position:"CF"}]},
- scorers:["Salah 2' (pen.)","Origi 87'"],
- notes:"An all-English final. Salah's 2nd-minute penalty (after a Sissoko handball) was among the fastest goals in final history; Origi sealed it late."},
-
-{year:2020,date:"2020-08-23",venue:"Estádio da Luz",city:"Lisbon",country:"Portugal",score:"1–0",afterExtraTime:false,penalties:null,
- teamA:{name:"Bayern Munich",manager:"Hansi Flick",formation:"4-2-3-1",isWinner:true,startingXI:[
-  {number:1,name:"Manuel Neuer",position:"GK"},{number:32,name:"Joshua Kimmich",position:"RB"},{number:17,name:"Jérôme Boateng",position:"RCB"},{number:27,name:"David Alaba",position:"LCB"},{number:19,name:"Alphonso Davies",position:"LB"},{number:6,name:"Thiago Alcântara",position:"DM"},{number:18,name:"Leon Goretzka",position:"CM"},{number:22,name:"Serge Gnabry",position:"RW"},{number:25,name:"Thomas Müller",position:"AM"},{number:29,name:"Kingsley Coman",position:"LW"},{number:9,name:"Robert Lewandowski",position:"CF"}]},
- teamB:{name:"Paris Saint-Germain",manager:"Thomas Tuchel",formation:"4-3-3",isWinner:false,startingXI:[
-  {number:1,name:"Keylor Navas",position:"GK"},{number:4,name:"Thilo Kehrer",position:"RB"},{number:2,name:"Thiago Silva",position:"RCB"},{number:3,name:"Presnel Kimpembe",position:"LCB"},{number:14,name:"Juan Bernat",position:"LB"},{number:8,name:"Leandro Paredes",position:"DM"},{number:21,name:"Ander Herrera",position:"CM"},{number:5,name:"Marquinhos",position:"CM"},{number:11,name:"Ángel Di María",position:"RW"},{number:7,name:"Kylian Mbappé",position:"CF"},{number:10,name:"Neymar",position:"LW"}]},
- scorers:["Coman 59'"],
- notes:"Played behind closed doors due to COVID-19. Bayern won every match en route to the treble; Coman — Paris-born and a former PSG academy player — headed the winner against his boyhood club."},
+ {
+  "year": 2000,
+  "date": "2000-05-24",
+  "venue": "Stade de France",
+  "city": "Saint-Denis (Paris)",
+  "country": "France",
+  "score": "3–0",
+  "afterExtraTime": false,
+  "penalties": null,
+  "teamA": {
+   "name": "Real Madrid",
+   "manager": "Vicente del Bosque",
+   "formation": "4-4-2",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 27,
+     "name": "Iker Casillas",
+     "position": "GK"
+    },
+    {
+     "number": 2,
+     "name": "Míchel Salgado",
+     "position": "RB"
+    },
+    {
+     "number": 18,
+     "name": "Aitor Karanka",
+     "position": "RCB"
+    },
+    {
+     "number": 15,
+     "name": "Iván Helguera",
+     "position": "LCB"
+    },
+    {
+     "number": 3,
+     "name": "Roberto Carlos",
+     "position": "LB"
+    },
+    {
+     "number": 8,
+     "name": "Steve McManaman",
+     "position": "RM"
+    },
+    {
+     "number": 6,
+     "name": "Fernando Redondo",
+     "position": "CM"
+    },
+    {
+     "number": 12,
+     "name": "Iván Campo",
+     "position": "CM"
+    },
+    {
+     "number": 7,
+     "name": "Raúl",
+     "position": "LM"
+    },
+    {
+     "number": 9,
+     "name": "Fernando Morientes",
+     "position": "CF"
+    },
+    {
+     "number": 19,
+     "name": "Nicolas Anelka",
+     "position": "CF"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Valencia",
+   "manager": "Héctor Cúper",
+   "formation": "4-4-2",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Santiago Cañizares",
+     "position": "GK"
+    },
+    {
+     "number": 20,
+     "name": "Jocelyn Angloma",
+     "position": "RB"
+    },
+    {
+     "number": 5,
+     "name": "Miroslav Đukić",
+     "position": "RCB"
+    },
+    {
+     "number": 2,
+     "name": "Mauricio Pellegrino",
+     "position": "LCB"
+    },
+    {
+     "number": 31,
+     "name": "Gerardo García León",
+     "position": "LB"
+    },
+    {
+     "number": 6,
+     "name": "Gaizka Mendieta",
+     "position": "RM"
+    },
+    {
+     "number": 8,
+     "name": "Javier Farinós",
+     "position": "DM"
+    },
+    {
+     "number": 14,
+     "name": "Gerard López",
+     "position": "CM"
+    },
+    {
+     "number": 18,
+     "name": "Kily González",
+     "position": "LM"
+    },
+    {
+     "number": 10,
+     "name": "Miguel Ángel Angulo",
+     "position": "CF"
+    },
+    {
+     "number": 7,
+     "name": "Claudio López",
+     "position": "ST"
+    }
+   ]
+  },
+  "scorers": [
+   "Morientes 39'",
+   "McManaman 67'",
+   "Raúl 75'"
+  ],
+  "notes": "Real Madrid's 8th European Cup; Casillas, 19, became the youngest goalkeeper to win a final. Shown as 4-4-2 (the most widely cited record); some sources list a 3-5-2 with Salgado and Roberto Carlos as wing-backs."
+ },
+ {
+  "year": 2001,
+  "date": "2001-05-23",
+  "venue": "San Siro",
+  "city": "Milan",
+  "country": "Italy",
+  "score": "1–1",
+  "afterExtraTime": true,
+  "penalties": "5–4",
+  "teamA": {
+   "name": "Bayern Munich",
+   "manager": "Ottmar Hitzfeld",
+   "formation": "5-4-1",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Oliver Kahn",
+     "position": "GK"
+    },
+    {
+     "number": 4,
+     "name": "Samuel Kuffour",
+     "position": "RCB"
+    },
+    {
+     "number": 5,
+     "name": "Patrik Andersson",
+     "position": "CB"
+    },
+    {
+     "number": 25,
+     "name": "Thomas Linke",
+     "position": "LCB"
+    },
+    {
+     "number": 2,
+     "name": "Willy Sagnol",
+     "position": "RWB"
+    },
+    {
+     "number": 3,
+     "name": "Bixente Lizarazu",
+     "position": "LWB"
+    },
+    {
+     "number": 23,
+     "name": "Owen Hargreaves",
+     "position": "DM"
+    },
+    {
+     "number": 20,
+     "name": "Hasan Salihamidžić",
+     "position": "RM"
+    },
+    {
+     "number": 11,
+     "name": "Stefan Effenberg",
+     "position": "CM"
+    },
+    {
+     "number": 7,
+     "name": "Mehmet Scholl",
+     "position": "LM"
+    },
+    {
+     "number": 9,
+     "name": "Giovane Élber",
+     "position": "ST"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Valencia",
+   "manager": "Héctor Cúper",
+   "formation": "4-4-2",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Santiago Cañizares",
+     "position": "GK"
+    },
+    {
+     "number": 20,
+     "name": "Jocelyn Angloma",
+     "position": "RB"
+    },
+    {
+     "number": 12,
+     "name": "Roberto Ayala",
+     "position": "RCB"
+    },
+    {
+     "number": 2,
+     "name": "Mauricio Pellegrino",
+     "position": "LCB"
+    },
+    {
+     "number": 15,
+     "name": "Amedeo Carboni",
+     "position": "LB"
+    },
+    {
+     "number": 6,
+     "name": "Gaizka Mendieta",
+     "position": "RM"
+    },
+    {
+     "number": 19,
+     "name": "Rubén Baraja",
+     "position": "CM"
+    },
+    {
+     "number": 18,
+     "name": "Kily González",
+     "position": "LM"
+    },
+    {
+     "number": 35,
+     "name": "Pablo Aimar",
+     "position": "AM"
+    },
+    {
+     "number": 17,
+     "name": "Juan Sánchez",
+     "position": "CF"
+    },
+    {
+     "number": 7,
+     "name": "John Carew",
+     "position": "ST"
+    }
+   ]
+  },
+  "scorers": [
+   "Mendieta 3' (pen.)",
+   "Effenberg 50' (pen.)"
+  ],
+  "notes": "1–1 after extra time; Bayern won 5–4 on penalties for a 4th European Cup, ending a 25-year wait. Oliver Kahn was the shootout hero. Valencia lost a second straight final."
+ },
+ {
+  "year": 2002,
+  "date": "2002-05-15",
+  "venue": "Hampden Park",
+  "city": "Glasgow",
+  "country": "Scotland",
+  "score": "2–1",
+  "afterExtraTime": false,
+  "penalties": null,
+  "teamA": {
+   "name": "Real Madrid",
+   "manager": "Vicente del Bosque",
+   "formation": "4-3-1-2",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "César Sánchez",
+     "position": "GK"
+    },
+    {
+     "number": 2,
+     "name": "Míchel Salgado",
+     "position": "RB"
+    },
+    {
+     "number": 4,
+     "name": "Fernando Hierro",
+     "position": "RCB"
+    },
+    {
+     "number": 6,
+     "name": "Iván Helguera",
+     "position": "LCB"
+    },
+    {
+     "number": 3,
+     "name": "Roberto Carlos",
+     "position": "LB"
+    },
+    {
+     "number": 24,
+     "name": "Claude Makélélé",
+     "position": "DM"
+    },
+    {
+     "number": 10,
+     "name": "Luís Figo",
+     "position": "RM"
+    },
+    {
+     "number": 21,
+     "name": "Santiago Solari",
+     "position": "LM"
+    },
+    {
+     "number": 5,
+     "name": "Zinedine Zidane",
+     "position": "AM"
+    },
+    {
+     "number": 7,
+     "name": "Raúl",
+     "position": "CF"
+    },
+    {
+     "number": 9,
+     "name": "Fernando Morientes",
+     "position": "ST"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Bayer Leverkusen",
+   "manager": "Klaus Toppmöller",
+   "formation": "4-2-3-1",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Hans-Jörg Butt",
+     "position": "GK"
+    },
+    {
+     "number": 26,
+     "name": "Zoltán Sebescen",
+     "position": "RB"
+    },
+    {
+     "number": 6,
+     "name": "Boris Živković",
+     "position": "RCB"
+    },
+    {
+     "number": 19,
+     "name": "Lúcio",
+     "position": "LCB"
+    },
+    {
+     "number": 35,
+     "name": "Diego Placente",
+     "position": "LB"
+    },
+    {
+     "number": 28,
+     "name": "Carsten Ramelow",
+     "position": "DM"
+    },
+    {
+     "number": 13,
+     "name": "Michael Ballack",
+     "position": "CM"
+    },
+    {
+     "number": 25,
+     "name": "Bernd Schneider",
+     "position": "RM"
+    },
+    {
+     "number": 23,
+     "name": "Yıldıray Baştürk",
+     "position": "AM"
+    },
+    {
+     "number": 10,
+     "name": "Thomas Brdarić",
+     "position": "LM"
+    },
+    {
+     "number": 27,
+     "name": "Oliver Neuville",
+     "position": "CF"
+    }
+   ]
+  },
+  "scorers": [
+   "Raúl 8'",
+   "Lúcio 13'",
+   "Zidane 45'"
+  ],
+  "notes": "'La Novena' (9th European Cup). Zidane's left-foot volley is rated among the greatest goals in final history; Casillas replaced the injured César and made decisive saves."
+ },
+ {
+  "year": 2003,
+  "date": "2003-05-28",
+  "venue": "Old Trafford",
+  "city": "Manchester",
+  "country": "England",
+  "score": "0–0",
+  "afterExtraTime": true,
+  "penalties": "3–2",
+  "teamA": {
+   "name": "AC Milan",
+   "manager": "Carlo Ancelotti",
+   "formation": "4-3-1-2",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 12,
+     "name": "Dida",
+     "position": "GK"
+    },
+    {
+     "number": 19,
+     "name": "Alessandro Costacurta",
+     "position": "RB"
+    },
+    {
+     "number": 13,
+     "name": "Alessandro Nesta",
+     "position": "RCB"
+    },
+    {
+     "number": 3,
+     "name": "Paolo Maldini",
+     "position": "LCB"
+    },
+    {
+     "number": 4,
+     "name": "Kakha Kaladze",
+     "position": "LB"
+    },
+    {
+     "number": 8,
+     "name": "Gennaro Gattuso",
+     "position": "CM"
+    },
+    {
+     "number": 21,
+     "name": "Andrea Pirlo",
+     "position": "DM"
+    },
+    {
+     "number": 20,
+     "name": "Clarence Seedorf",
+     "position": "CM"
+    },
+    {
+     "number": 10,
+     "name": "Manuel Rui Costa",
+     "position": "AM"
+    },
+    {
+     "number": 7,
+     "name": "Andriy Shevchenko",
+     "position": "CF"
+    },
+    {
+     "number": 9,
+     "name": "Filippo Inzaghi",
+     "position": "CF"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Juventus",
+   "manager": "Marcello Lippi",
+   "formation": "4-4-2",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Gianluigi Buffon",
+     "position": "GK"
+    },
+    {
+     "number": 21,
+     "name": "Lilian Thuram",
+     "position": "RB"
+    },
+    {
+     "number": 2,
+     "name": "Ciro Ferrara",
+     "position": "RCB"
+    },
+    {
+     "number": 5,
+     "name": "Igor Tudor",
+     "position": "LCB"
+    },
+    {
+     "number": 4,
+     "name": "Paolo Montero",
+     "position": "LB"
+    },
+    {
+     "number": 16,
+     "name": "Mauro Camoranesi",
+     "position": "RM"
+    },
+    {
+     "number": 3,
+     "name": "Alessio Tacchinardi",
+     "position": "CM"
+    },
+    {
+     "number": 26,
+     "name": "Edgar Davids",
+     "position": "CM"
+    },
+    {
+     "number": 19,
+     "name": "Gianluca Zambrotta",
+     "position": "LM"
+    },
+    {
+     "number": 10,
+     "name": "Alessandro Del Piero",
+     "position": "CF"
+    },
+    {
+     "number": 17,
+     "name": "David Trezeguet",
+     "position": "CF"
+    }
+   ]
+  },
+  "scorers": [],
+  "notes": "Goalless after 120 minutes; AC Milan won the shootout 3–2 for a 6th European Cup. All-Italian final; Milan's Rui Costa played as a trequartista behind Shevchenko and Inzaghi."
+ },
+ {
+  "year": 2004,
+  "date": "2004-05-26",
+  "venue": "Arena AufSchalke",
+  "city": "Gelsenkirchen",
+  "country": "Germany",
+  "score": "3–0",
+  "afterExtraTime": false,
+  "penalties": null,
+  "teamA": {
+   "name": "FC Porto",
+   "manager": "José Mourinho",
+   "formation": "4-3-1-2",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 99,
+     "name": "Vítor Baía",
+     "position": "GK"
+    },
+    {
+     "number": 22,
+     "name": "Paulo Ferreira",
+     "position": "RB"
+    },
+    {
+     "number": 2,
+     "name": "Jorge Costa",
+     "position": "RCB"
+    },
+    {
+     "number": 4,
+     "name": "Ricardo Carvalho",
+     "position": "LCB"
+    },
+    {
+     "number": 8,
+     "name": "Nuno Valente",
+     "position": "LB"
+    },
+    {
+     "number": 6,
+     "name": "Costinha",
+     "position": "DM"
+    },
+    {
+     "number": 18,
+     "name": "Maniche",
+     "position": "CM"
+    },
+    {
+     "number": 23,
+     "name": "Pedro Mendes",
+     "position": "CM"
+    },
+    {
+     "number": 10,
+     "name": "Deco",
+     "position": "AM"
+    },
+    {
+     "number": 19,
+     "name": "Carlos Alberto",
+     "position": "CF"
+    },
+    {
+     "number": 11,
+     "name": "Derlei",
+     "position": "CF"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "AS Monaco",
+   "manager": "Didier Deschamps",
+   "formation": "4-3-3",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Flávio Roma",
+     "position": "GK"
+    },
+    {
+     "number": 4,
+     "name": "Hugo Ibarra",
+     "position": "RB"
+    },
+    {
+     "number": 27,
+     "name": "Julien Rodriguez",
+     "position": "RCB"
+    },
+    {
+     "number": 32,
+     "name": "Gaël Givet",
+     "position": "LCB"
+    },
+    {
+     "number": 3,
+     "name": "Patrice Evra",
+     "position": "LB"
+    },
+    {
+     "number": 7,
+     "name": "Lucas Bernardi",
+     "position": "CM"
+    },
+    {
+     "number": 15,
+     "name": "Akis Zikos",
+     "position": "DM"
+    },
+    {
+     "number": 14,
+     "name": "Édouard Cissé",
+     "position": "CM"
+    },
+    {
+     "number": 8,
+     "name": "Ludovic Giuly",
+     "position": "RW"
+    },
+    {
+     "number": 25,
+     "name": "Jérôme Rothen",
+     "position": "LW"
+    },
+    {
+     "number": 10,
+     "name": "Fernando Morientes",
+     "position": "CF"
+    }
+   ]
+  },
+  "scorers": [
+   "Carlos Alberto 39'",
+   "Deco 71'",
+   "Alenichev 75'"
+  ],
+  "notes": "Porto won 3–0; Mourinho left for Chelsea days later. Monaco captain Giuly went off injured in the first half; Morientes was on loan from Real Madrid."
+ },
+ {
+  "year": 2005,
+  "date": "2005-05-25",
+  "venue": "Atatürk Olympic Stadium",
+  "city": "Istanbul",
+  "country": "Turkey",
+  "score": "3–3",
+  "afterExtraTime": true,
+  "penalties": "3–2",
+  "teamA": {
+   "name": "Liverpool",
+   "manager": "Rafael Benítez",
+   "formation": "4-4-1-1",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Jerzy Dudek",
+     "position": "GK"
+    },
+    {
+     "number": 3,
+     "name": "Steve Finnan",
+     "position": "RB"
+    },
+    {
+     "number": 23,
+     "name": "Jamie Carragher",
+     "position": "RCB"
+    },
+    {
+     "number": 4,
+     "name": "Sami Hyypiä",
+     "position": "LCB"
+    },
+    {
+     "number": 21,
+     "name": "Djimi Traoré",
+     "position": "LB"
+    },
+    {
+     "number": 10,
+     "name": "Luis García",
+     "position": "RM"
+    },
+    {
+     "number": 14,
+     "name": "Xabi Alonso",
+     "position": "CM"
+    },
+    {
+     "number": 8,
+     "name": "Steven Gerrard",
+     "position": "CM"
+    },
+    {
+     "number": 6,
+     "name": "John Arne Riise",
+     "position": "LM"
+    },
+    {
+     "number": 7,
+     "name": "Harry Kewell",
+     "position": "AM"
+    },
+    {
+     "number": 5,
+     "name": "Milan Baroš",
+     "position": "CF"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "AC Milan",
+   "manager": "Carlo Ancelotti",
+   "formation": "4-3-1-2",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Dida",
+     "position": "GK"
+    },
+    {
+     "number": 2,
+     "name": "Cafu",
+     "position": "RB"
+    },
+    {
+     "number": 31,
+     "name": "Jaap Stam",
+     "position": "RCB"
+    },
+    {
+     "number": 13,
+     "name": "Alessandro Nesta",
+     "position": "LCB"
+    },
+    {
+     "number": 3,
+     "name": "Paolo Maldini",
+     "position": "LB"
+    },
+    {
+     "number": 8,
+     "name": "Gennaro Gattuso",
+     "position": "CM"
+    },
+    {
+     "number": 21,
+     "name": "Andrea Pirlo",
+     "position": "DM"
+    },
+    {
+     "number": 20,
+     "name": "Clarence Seedorf",
+     "position": "CM"
+    },
+    {
+     "number": 22,
+     "name": "Kaká",
+     "position": "AM"
+    },
+    {
+     "number": 7,
+     "name": "Andriy Shevchenko",
+     "position": "CF"
+    },
+    {
+     "number": 11,
+     "name": "Hernán Crespo",
+     "position": "CF"
+    }
+   ]
+  },
+  "scorers": [
+   "Maldini 1'",
+   "Crespo 39'",
+   "Crespo 44'",
+   "Gerrard 54'",
+   "Šmicer 56'",
+   "Xabi Alonso 60'"
+  ],
+  "notes": "The Miracle of Istanbul: 3–0 down at half-time, Liverpool levelled in six second-half minutes and won 3–2 on penalties (Dudek saved from Shevchenko). Kewell went off injured early."
+ },
+ {
+  "year": 2006,
+  "date": "2006-05-17",
+  "venue": "Stade de France",
+  "city": "Saint-Denis (Paris)",
+  "country": "France",
+  "score": "2–1",
+  "afterExtraTime": false,
+  "penalties": null,
+  "teamA": {
+   "name": "Barcelona",
+   "manager": "Frank Rijkaard",
+   "formation": "4-3-3",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Víctor Valdés",
+     "position": "GK"
+    },
+    {
+     "number": 23,
+     "name": "Oleguer Presas",
+     "position": "RB"
+    },
+    {
+     "number": 4,
+     "name": "Rafael Márquez",
+     "position": "RCB"
+    },
+    {
+     "number": 5,
+     "name": "Carles Puyol",
+     "position": "LCB"
+    },
+    {
+     "number": 12,
+     "name": "Giovanni van Bronckhorst",
+     "position": "LB"
+    },
+    {
+     "number": 15,
+     "name": "Edmílson",
+     "position": "DM"
+    },
+    {
+     "number": 20,
+     "name": "Deco",
+     "position": "CM"
+    },
+    {
+     "number": 17,
+     "name": "Mark van Bommel",
+     "position": "CM"
+    },
+    {
+     "number": 8,
+     "name": "Ludovic Giuly",
+     "position": "RW"
+    },
+    {
+     "number": 10,
+     "name": "Ronaldinho",
+     "position": "LW"
+    },
+    {
+     "number": 9,
+     "name": "Samuel Eto'o",
+     "position": "CF"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Arsenal",
+   "manager": "Arsène Wenger",
+   "formation": "4-4-1-1",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Jens Lehmann",
+     "position": "GK"
+    },
+    {
+     "number": 27,
+     "name": "Emmanuel Eboué",
+     "position": "RB"
+    },
+    {
+     "number": 28,
+     "name": "Kolo Touré",
+     "position": "RCB"
+    },
+    {
+     "number": 23,
+     "name": "Sol Campbell",
+     "position": "LCB"
+    },
+    {
+     "number": 3,
+     "name": "Ashley Cole",
+     "position": "LB"
+    },
+    {
+     "number": 7,
+     "name": "Robert Pirès",
+     "position": "RM"
+    },
+    {
+     "number": 19,
+     "name": "Gilberto Silva",
+     "position": "CM"
+    },
+    {
+     "number": 15,
+     "name": "Cesc Fàbregas",
+     "position": "CM"
+    },
+    {
+     "number": 13,
+     "name": "Alexander Hleb",
+     "position": "LM"
+    },
+    {
+     "number": 8,
+     "name": "Freddie Ljungberg",
+     "position": "SS"
+    },
+    {
+     "number": 14,
+     "name": "Thierry Henry",
+     "position": "CF"
+    }
+   ]
+  },
+  "scorers": [
+   "Campbell 37'",
+   "Eto'o 76'",
+   "Belletti 80'"
+  ],
+  "notes": "Arsenal keeper Lehmann was sent off on 18' (the first red card in a European Cup final); Pirès was withdrawn for sub keeper Almunia. The XI shown is who started."
+ },
+ {
+  "year": 2007,
+  "date": "2007-05-23",
+  "venue": "Olympic Stadium (Spyros Louis)",
+  "city": "Athens",
+  "country": "Greece",
+  "score": "2–1",
+  "afterExtraTime": false,
+  "penalties": null,
+  "teamA": {
+   "name": "AC Milan",
+   "manager": "Carlo Ancelotti",
+   "formation": "4-3-2-1",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Dida",
+     "position": "GK"
+    },
+    {
+     "number": 44,
+     "name": "Massimo Oddo",
+     "position": "RB"
+    },
+    {
+     "number": 13,
+     "name": "Alessandro Nesta",
+     "position": "RCB"
+    },
+    {
+     "number": 3,
+     "name": "Paolo Maldini",
+     "position": "LCB"
+    },
+    {
+     "number": 18,
+     "name": "Marek Jankulovski",
+     "position": "LB"
+    },
+    {
+     "number": 8,
+     "name": "Gennaro Gattuso",
+     "position": "CM"
+    },
+    {
+     "number": 21,
+     "name": "Andrea Pirlo",
+     "position": "DM"
+    },
+    {
+     "number": 23,
+     "name": "Massimo Ambrosini",
+     "position": "CM"
+    },
+    {
+     "number": 10,
+     "name": "Clarence Seedorf",
+     "position": "AM"
+    },
+    {
+     "number": 22,
+     "name": "Kaká",
+     "position": "AM"
+    },
+    {
+     "number": 9,
+     "name": "Filippo Inzaghi",
+     "position": "CF"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Liverpool",
+   "manager": "Rafael Benítez",
+   "formation": "4-2-3-1",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 25,
+     "name": "José Reina",
+     "position": "GK"
+    },
+    {
+     "number": 3,
+     "name": "Steve Finnan",
+     "position": "RB"
+    },
+    {
+     "number": 23,
+     "name": "Jamie Carragher",
+     "position": "RCB"
+    },
+    {
+     "number": 5,
+     "name": "Daniel Agger",
+     "position": "LCB"
+    },
+    {
+     "number": 6,
+     "name": "John Arne Riise",
+     "position": "LB"
+    },
+    {
+     "number": 14,
+     "name": "Xabi Alonso",
+     "position": "DM"
+    },
+    {
+     "number": 20,
+     "name": "Javier Mascherano",
+     "position": "DM"
+    },
+    {
+     "number": 16,
+     "name": "Jermaine Pennant",
+     "position": "RM"
+    },
+    {
+     "number": 32,
+     "name": "Boudewijn Zenden",
+     "position": "LM"
+    },
+    {
+     "number": 8,
+     "name": "Steven Gerrard",
+     "position": "AM"
+    },
+    {
+     "number": 18,
+     "name": "Dirk Kuyt",
+     "position": "CF"
+    }
+   ]
+  },
+  "scorers": [
+   "Inzaghi 45'",
+   "Inzaghi 82'",
+   "Kuyt 89'"
+  ],
+  "notes": "Rematch of 2005. Milan's 'Christmas tree' 4-3-2-1 avenged Istanbul; they fielded the oldest starting XI in a final (avg ~31)."
+ },
+ {
+  "year": 2008,
+  "date": "2008-05-21",
+  "venue": "Luzhniki Stadium",
+  "city": "Moscow",
+  "country": "Russia",
+  "score": "1–1",
+  "afterExtraTime": true,
+  "penalties": "6–5",
+  "teamA": {
+   "name": "Manchester United",
+   "manager": "Sir Alex Ferguson",
+   "formation": "4-4-2",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Edwin van der Sar",
+     "position": "GK"
+    },
+    {
+     "number": 6,
+     "name": "Wes Brown",
+     "position": "RB"
+    },
+    {
+     "number": 5,
+     "name": "Rio Ferdinand",
+     "position": "RCB"
+    },
+    {
+     "number": 15,
+     "name": "Nemanja Vidić",
+     "position": "LCB"
+    },
+    {
+     "number": 3,
+     "name": "Patrice Evra",
+     "position": "LB"
+    },
+    {
+     "number": 4,
+     "name": "Owen Hargreaves",
+     "position": "RM"
+    },
+    {
+     "number": 18,
+     "name": "Paul Scholes",
+     "position": "CM"
+    },
+    {
+     "number": 16,
+     "name": "Michael Carrick",
+     "position": "CM"
+    },
+    {
+     "number": 7,
+     "name": "Cristiano Ronaldo",
+     "position": "LM"
+    },
+    {
+     "number": 10,
+     "name": "Wayne Rooney",
+     "position": "CF"
+    },
+    {
+     "number": 32,
+     "name": "Carlos Tévez",
+     "position": "CF"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Chelsea",
+   "manager": "Avram Grant",
+   "formation": "4-3-3",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Petr Čech",
+     "position": "GK"
+    },
+    {
+     "number": 5,
+     "name": "Michael Essien",
+     "position": "RB"
+    },
+    {
+     "number": 6,
+     "name": "Ricardo Carvalho",
+     "position": "RCB"
+    },
+    {
+     "number": 26,
+     "name": "John Terry",
+     "position": "LCB"
+    },
+    {
+     "number": 3,
+     "name": "Ashley Cole",
+     "position": "LB"
+    },
+    {
+     "number": 4,
+     "name": "Claude Makélélé",
+     "position": "DM"
+    },
+    {
+     "number": 13,
+     "name": "Michael Ballack",
+     "position": "CM"
+    },
+    {
+     "number": 8,
+     "name": "Frank Lampard",
+     "position": "CM"
+    },
+    {
+     "number": 10,
+     "name": "Joe Cole",
+     "position": "RW"
+    },
+    {
+     "number": 15,
+     "name": "Florent Malouda",
+     "position": "LW"
+    },
+    {
+     "number": 11,
+     "name": "Didier Drogba",
+     "position": "CF"
+    }
+   ]
+  },
+  "scorers": [
+   "Ronaldo 26'",
+   "Lampard 45+'"
+  ],
+  "notes": "1–1 after extra time; United won 6–5 on penalties (Ronaldo missed, Terry slipped, Van der Sar saved from Anelka). Drogba was sent off in extra time; Essien started at right-back."
+ },
+ {
+  "year": 2009,
+  "date": "2009-05-27",
+  "venue": "Stadio Olimpico",
+  "city": "Rome",
+  "country": "Italy",
+  "score": "2–0",
+  "afterExtraTime": false,
+  "penalties": null,
+  "teamA": {
+   "name": "Barcelona",
+   "manager": "Pep Guardiola",
+   "formation": "4-3-3",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Víctor Valdés",
+     "position": "GK"
+    },
+    {
+     "number": 5,
+     "name": "Carles Puyol",
+     "position": "RB"
+    },
+    {
+     "number": 3,
+     "name": "Gerard Piqué",
+     "position": "RCB"
+    },
+    {
+     "number": 24,
+     "name": "Yaya Touré",
+     "position": "LCB"
+    },
+    {
+     "number": 16,
+     "name": "Sylvinho",
+     "position": "LB"
+    },
+    {
+     "number": 6,
+     "name": "Xavi",
+     "position": "CM"
+    },
+    {
+     "number": 28,
+     "name": "Sergio Busquets",
+     "position": "DM"
+    },
+    {
+     "number": 8,
+     "name": "Andrés Iniesta",
+     "position": "CM"
+    },
+    {
+     "number": 9,
+     "name": "Samuel Eto'o",
+     "position": "RW"
+    },
+    {
+     "number": 10,
+     "name": "Lionel Messi",
+     "position": "CF"
+    },
+    {
+     "number": 14,
+     "name": "Thierry Henry",
+     "position": "LW"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Manchester United",
+   "manager": "Sir Alex Ferguson",
+   "formation": "4-4-2",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Edwin van der Sar",
+     "position": "GK"
+    },
+    {
+     "number": 22,
+     "name": "John O'Shea",
+     "position": "RB"
+    },
+    {
+     "number": 5,
+     "name": "Rio Ferdinand",
+     "position": "RCB"
+    },
+    {
+     "number": 15,
+     "name": "Nemanja Vidić",
+     "position": "LCB"
+    },
+    {
+     "number": 3,
+     "name": "Patrice Evra",
+     "position": "LB"
+    },
+    {
+     "number": 13,
+     "name": "Park Ji-sung",
+     "position": "RM"
+    },
+    {
+     "number": 16,
+     "name": "Michael Carrick",
+     "position": "CM"
+    },
+    {
+     "number": 8,
+     "name": "Anderson",
+     "position": "CM"
+    },
+    {
+     "number": 11,
+     "name": "Ryan Giggs",
+     "position": "LM"
+    },
+    {
+     "number": 7,
+     "name": "Cristiano Ronaldo",
+     "position": "CF"
+    },
+    {
+     "number": 10,
+     "name": "Wayne Rooney",
+     "position": "CF"
+    }
+   ]
+  },
+  "scorers": [
+   "Eto'o 10'",
+   "Messi 70'"
+  ],
+  "notes": "Barça fielded a makeshift back line — Alves & Abidal suspended, Márquez injured — so Puyol played right-back, Yaya Touré at centre-back and Sylvinho at left-back. Guardiola's first European Cup."
+ },
+ {
+  "year": 2010,
+  "date": "2010-05-22",
+  "venue": "Santiago Bernabéu",
+  "city": "Madrid",
+  "country": "Spain",
+  "score": "2–0",
+  "afterExtraTime": false,
+  "penalties": null,
+  "teamA": {
+   "name": "Inter Milan",
+   "manager": "José Mourinho",
+   "formation": "4-2-3-1",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 12,
+     "name": "Júlio César",
+     "position": "GK"
+    },
+    {
+     "number": 13,
+     "name": "Maicon",
+     "position": "RB"
+    },
+    {
+     "number": 6,
+     "name": "Lúcio",
+     "position": "RCB"
+    },
+    {
+     "number": 25,
+     "name": "Walter Samuel",
+     "position": "LCB"
+    },
+    {
+     "number": 26,
+     "name": "Cristian Chivu",
+     "position": "LB"
+    },
+    {
+     "number": 4,
+     "name": "Javier Zanetti",
+     "position": "DM"
+    },
+    {
+     "number": 19,
+     "name": "Esteban Cambiasso",
+     "position": "DM"
+    },
+    {
+     "number": 9,
+     "name": "Samuel Eto'o",
+     "position": "RF"
+    },
+    {
+     "number": 10,
+     "name": "Wesley Sneijder",
+     "position": "AM"
+    },
+    {
+     "number": 27,
+     "name": "Goran Pandev",
+     "position": "LF"
+    },
+    {
+     "number": 22,
+     "name": "Diego Milito",
+     "position": "ST"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Bayern Munich",
+   "manager": "Louis van Gaal",
+   "formation": "4-2-3-1",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 22,
+     "name": "Hans-Jörg Butt",
+     "position": "GK"
+    },
+    {
+     "number": 21,
+     "name": "Philipp Lahm",
+     "position": "RB"
+    },
+    {
+     "number": 5,
+     "name": "Daniel Van Buyten",
+     "position": "RCB"
+    },
+    {
+     "number": 6,
+     "name": "Martín Demichelis",
+     "position": "LCB"
+    },
+    {
+     "number": 28,
+     "name": "Holger Badstuber",
+     "position": "LB"
+    },
+    {
+     "number": 17,
+     "name": "Mark van Bommel",
+     "position": "DM"
+    },
+    {
+     "number": 31,
+     "name": "Bastian Schweinsteiger",
+     "position": "DM"
+    },
+    {
+     "number": 10,
+     "name": "Arjen Robben",
+     "position": "RW"
+    },
+    {
+     "number": 25,
+     "name": "Thomas Müller",
+     "position": "AM"
+    },
+    {
+     "number": 8,
+     "name": "Hamit Altıntop",
+     "position": "LW"
+    },
+    {
+     "number": 11,
+     "name": "Ivica Olić",
+     "position": "ST"
+    }
+   ]
+  },
+  "scorers": [
+   "Milito 35'",
+   "Milito 70'"
+  ],
+  "notes": "At the Bernabéu, Inter completed the treble under Mourinho; Diego Milito scored both goals."
+ },
+ {
+  "year": 2011,
+  "date": "2011-05-28",
+  "venue": "Wembley Stadium",
+  "city": "London",
+  "country": "England",
+  "score": "3–1",
+  "afterExtraTime": false,
+  "penalties": null,
+  "teamA": {
+   "name": "Barcelona",
+   "manager": "Pep Guardiola",
+   "formation": "4-3-3",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Víctor Valdés",
+     "position": "GK"
+    },
+    {
+     "number": 2,
+     "name": "Dani Alves",
+     "position": "RB"
+    },
+    {
+     "number": 3,
+     "name": "Gerard Piqué",
+     "position": "LCB"
+    },
+    {
+     "number": 14,
+     "name": "Javier Mascherano",
+     "position": "RCB"
+    },
+    {
+     "number": 22,
+     "name": "Éric Abidal",
+     "position": "LB"
+    },
+    {
+     "number": 6,
+     "name": "Xavi",
+     "position": "CM"
+    },
+    {
+     "number": 16,
+     "name": "Sergio Busquets",
+     "position": "DM"
+    },
+    {
+     "number": 8,
+     "name": "Andrés Iniesta",
+     "position": "CM"
+    },
+    {
+     "number": 17,
+     "name": "Pedro",
+     "position": "LW"
+    },
+    {
+     "number": 10,
+     "name": "Lionel Messi",
+     "position": "CF"
+    },
+    {
+     "number": 7,
+     "name": "David Villa",
+     "position": "RW"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Manchester United",
+   "manager": "Sir Alex Ferguson",
+   "formation": "4-4-1-1",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Edwin van der Sar",
+     "position": "GK"
+    },
+    {
+     "number": 20,
+     "name": "Fábio",
+     "position": "RB"
+    },
+    {
+     "number": 5,
+     "name": "Rio Ferdinand",
+     "position": "RCB"
+    },
+    {
+     "number": 15,
+     "name": "Nemanja Vidić",
+     "position": "LCB"
+    },
+    {
+     "number": 3,
+     "name": "Patrice Evra",
+     "position": "LB"
+    },
+    {
+     "number": 25,
+     "name": "Antonio Valencia",
+     "position": "RM"
+    },
+    {
+     "number": 16,
+     "name": "Michael Carrick",
+     "position": "CM"
+    },
+    {
+     "number": 11,
+     "name": "Ryan Giggs",
+     "position": "CM"
+    },
+    {
+     "number": 13,
+     "name": "Park Ji-sung",
+     "position": "LM"
+    },
+    {
+     "number": 10,
+     "name": "Wayne Rooney",
+     "position": "SS"
+    },
+    {
+     "number": 14,
+     "name": "Javier Hernández",
+     "position": "CF"
+    }
+   ]
+  },
+  "scorers": [
+   "Pedro 27'",
+   "Rooney 34'",
+   "Messi 54'",
+   "Villa 69'"
+  ],
+  "notes": "At Wembley. Abidal started at left-back months after liver surgery; captain Puyol came on only as a late substitute (did not start). Mascherano partnered Piqué in central defence."
+ },
+ {
+  "year": 2012,
+  "date": "2012-05-19",
+  "venue": "Allianz Arena",
+  "city": "Munich",
+  "country": "Germany",
+  "score": "1–1",
+  "afterExtraTime": true,
+  "penalties": "4–3",
+  "teamA": {
+   "name": "Chelsea",
+   "manager": "Roberto Di Matteo",
+   "formation": "4-2-3-1",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Petr Čech",
+     "position": "GK"
+    },
+    {
+     "number": 17,
+     "name": "José Bosingwa",
+     "position": "RB"
+    },
+    {
+     "number": 4,
+     "name": "David Luiz",
+     "position": "RCB"
+    },
+    {
+     "number": 24,
+     "name": "Gary Cahill",
+     "position": "LCB"
+    },
+    {
+     "number": 3,
+     "name": "Ashley Cole",
+     "position": "LB"
+    },
+    {
+     "number": 12,
+     "name": "John Obi Mikel",
+     "position": "DM"
+    },
+    {
+     "number": 8,
+     "name": "Frank Lampard",
+     "position": "CM"
+    },
+    {
+     "number": 21,
+     "name": "Salomon Kalou",
+     "position": "RM"
+    },
+    {
+     "number": 10,
+     "name": "Juan Mata",
+     "position": "AM"
+    },
+    {
+     "number": 34,
+     "name": "Ryan Bertrand",
+     "position": "LM"
+    },
+    {
+     "number": 11,
+     "name": "Didier Drogba",
+     "position": "CF"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Bayern Munich",
+   "manager": "Jupp Heynckes",
+   "formation": "4-2-3-1",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Manuel Neuer",
+     "position": "GK"
+    },
+    {
+     "number": 21,
+     "name": "Philipp Lahm",
+     "position": "RB"
+    },
+    {
+     "number": 17,
+     "name": "Jérôme Boateng",
+     "position": "RCB"
+    },
+    {
+     "number": 44,
+     "name": "Anatoliy Tymoshchuk",
+     "position": "LCB"
+    },
+    {
+     "number": 26,
+     "name": "Diego Contento",
+     "position": "LB"
+    },
+    {
+     "number": 31,
+     "name": "Bastian Schweinsteiger",
+     "position": "DM"
+    },
+    {
+     "number": 39,
+     "name": "Toni Kroos",
+     "position": "DM"
+    },
+    {
+     "number": 10,
+     "name": "Arjen Robben",
+     "position": "RW"
+    },
+    {
+     "number": 25,
+     "name": "Thomas Müller",
+     "position": "AM"
+    },
+    {
+     "number": 7,
+     "name": "Franck Ribéry",
+     "position": "LW"
+    },
+    {
+     "number": 33,
+     "name": "Mario Gómez",
+     "position": "CF"
+    }
+   ]
+  },
+  "scorers": [
+   "Müller 83'",
+   "Drogba 88'"
+  ],
+  "notes": "At Bayern's own stadium; 1–1 after extra time, Chelsea won 4–3 on penalties (Drogba's the decisive kick) for their first European Cup."
+ },
+ {
+  "year": 2013,
+  "date": "2013-05-25",
+  "venue": "Wembley Stadium",
+  "city": "London",
+  "country": "England",
+  "score": "2–1",
+  "afterExtraTime": false,
+  "penalties": null,
+  "teamA": {
+   "name": "Bayern Munich",
+   "manager": "Jupp Heynckes",
+   "formation": "4-2-3-1",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Manuel Neuer",
+     "position": "GK"
+    },
+    {
+     "number": 21,
+     "name": "Philipp Lahm",
+     "position": "RB"
+    },
+    {
+     "number": 17,
+     "name": "Jérôme Boateng",
+     "position": "RCB"
+    },
+    {
+     "number": 4,
+     "name": "Dante",
+     "position": "LCB"
+    },
+    {
+     "number": 27,
+     "name": "David Alaba",
+     "position": "LB"
+    },
+    {
+     "number": 8,
+     "name": "Javi Martínez",
+     "position": "DM"
+    },
+    {
+     "number": 31,
+     "name": "Bastian Schweinsteiger",
+     "position": "DM"
+    },
+    {
+     "number": 10,
+     "name": "Arjen Robben",
+     "position": "RW"
+    },
+    {
+     "number": 25,
+     "name": "Thomas Müller",
+     "position": "AM"
+    },
+    {
+     "number": 7,
+     "name": "Franck Ribéry",
+     "position": "LW"
+    },
+    {
+     "number": 9,
+     "name": "Mario Mandžukić",
+     "position": "CF"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Borussia Dortmund",
+   "manager": "Jürgen Klopp",
+   "formation": "4-2-3-1",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Roman Weidenfeller",
+     "position": "GK"
+    },
+    {
+     "number": 26,
+     "name": "Łukasz Piszczek",
+     "position": "RB"
+    },
+    {
+     "number": 4,
+     "name": "Neven Subotić",
+     "position": "RCB"
+    },
+    {
+     "number": 15,
+     "name": "Mats Hummels",
+     "position": "LCB"
+    },
+    {
+     "number": 29,
+     "name": "Marcel Schmelzer",
+     "position": "LB"
+    },
+    {
+     "number": 6,
+     "name": "Sven Bender",
+     "position": "DM"
+    },
+    {
+     "number": 8,
+     "name": "İlkay Gündoğan",
+     "position": "DM"
+    },
+    {
+     "number": 16,
+     "name": "Jakub Błaszczykowski",
+     "position": "RW"
+    },
+    {
+     "number": 11,
+     "name": "Marco Reus",
+     "position": "AM"
+    },
+    {
+     "number": 19,
+     "name": "Kevin Großkreutz",
+     "position": "LW"
+    },
+    {
+     "number": 9,
+     "name": "Robert Lewandowski",
+     "position": "CF"
+    }
+   ]
+  },
+  "scorers": [
+   "Mandžukić 60'",
+   "Gündoğan 68' (pen.)",
+   "Robben 89'"
+  ],
+  "notes": "The first all-German final. Robben scored the late winner; Gündoğan had equalised from the penalty spot."
+ },
+ {
+  "year": 2014,
+  "date": "2014-05-24",
+  "venue": "Estádio da Luz",
+  "city": "Lisbon",
+  "country": "Portugal",
+  "score": "4–1",
+  "afterExtraTime": true,
+  "penalties": null,
+  "teamA": {
+   "name": "Real Madrid",
+   "manager": "Carlo Ancelotti",
+   "formation": "4-3-3",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Iker Casillas",
+     "position": "GK"
+    },
+    {
+     "number": 15,
+     "name": "Dani Carvajal",
+     "position": "RB"
+    },
+    {
+     "number": 2,
+     "name": "Raphaël Varane",
+     "position": "RCB"
+    },
+    {
+     "number": 4,
+     "name": "Sergio Ramos",
+     "position": "LCB"
+    },
+    {
+     "number": 5,
+     "name": "Fábio Coentrão",
+     "position": "LB"
+    },
+    {
+     "number": 19,
+     "name": "Luka Modrić",
+     "position": "CM"
+    },
+    {
+     "number": 6,
+     "name": "Sami Khedira",
+     "position": "DM"
+    },
+    {
+     "number": 22,
+     "name": "Ángel Di María",
+     "position": "CM"
+    },
+    {
+     "number": 11,
+     "name": "Gareth Bale",
+     "position": "RW"
+    },
+    {
+     "number": 9,
+     "name": "Karim Benzema",
+     "position": "CF"
+    },
+    {
+     "number": 7,
+     "name": "Cristiano Ronaldo",
+     "position": "LW"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Atlético Madrid",
+   "manager": "Diego Simeone",
+   "formation": "4-4-2",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 13,
+     "name": "Thibaut Courtois",
+     "position": "GK"
+    },
+    {
+     "number": 20,
+     "name": "Juanfran",
+     "position": "RB"
+    },
+    {
+     "number": 2,
+     "name": "Diego Godín",
+     "position": "RCB"
+    },
+    {
+     "number": 23,
+     "name": "Miranda",
+     "position": "LCB"
+    },
+    {
+     "number": 3,
+     "name": "Filipe Luís",
+     "position": "LB"
+    },
+    {
+     "number": 8,
+     "name": "Raúl García",
+     "position": "RM"
+    },
+    {
+     "number": 5,
+     "name": "Tiago",
+     "position": "CM"
+    },
+    {
+     "number": 14,
+     "name": "Gabi",
+     "position": "CM"
+    },
+    {
+     "number": 6,
+     "name": "Koke",
+     "position": "LM"
+    },
+    {
+     "number": 19,
+     "name": "Diego Costa",
+     "position": "ST"
+    },
+    {
+     "number": 9,
+     "name": "David Villa",
+     "position": "ST"
+    }
+   ]
+  },
+  "scorers": [
+   "Godín 36'",
+   "Ramos 90+3'",
+   "Bale 110'",
+   "Marcelo 118'",
+   "Ronaldo 120' (pen.)"
+  ],
+  "notes": "'La Décima' (10th European Cup). Ramos equalised deep in stoppage time (90+3'); Real then scored three times in extra time. Courtois started in goal on loan from Chelsea; Diego Costa limped off on 9'."
+ },
+ {
+  "year": 2015,
+  "date": "2015-06-06",
+  "venue": "Olympiastadion",
+  "city": "Berlin",
+  "country": "Germany",
+  "score": "3–1",
+  "afterExtraTime": false,
+  "penalties": null,
+  "teamA": {
+   "name": "Barcelona",
+   "manager": "Luis Enrique",
+   "formation": "4-3-3",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Marc-André ter Stegen",
+     "position": "GK"
+    },
+    {
+     "number": 22,
+     "name": "Dani Alves",
+     "position": "RB"
+    },
+    {
+     "number": 3,
+     "name": "Gerard Piqué",
+     "position": "RCB"
+    },
+    {
+     "number": 14,
+     "name": "Javier Mascherano",
+     "position": "LCB"
+    },
+    {
+     "number": 18,
+     "name": "Jordi Alba",
+     "position": "LB"
+    },
+    {
+     "number": 5,
+     "name": "Sergio Busquets",
+     "position": "DM"
+    },
+    {
+     "number": 4,
+     "name": "Ivan Rakitić",
+     "position": "CM"
+    },
+    {
+     "number": 8,
+     "name": "Andrés Iniesta",
+     "position": "CM"
+    },
+    {
+     "number": 10,
+     "name": "Lionel Messi",
+     "position": "RW"
+    },
+    {
+     "number": 9,
+     "name": "Luis Suárez",
+     "position": "CF"
+    },
+    {
+     "number": 11,
+     "name": "Neymar",
+     "position": "LW"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Juventus",
+   "manager": "Massimiliano Allegri",
+   "formation": "4-3-1-2",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Gianluigi Buffon",
+     "position": "GK"
+    },
+    {
+     "number": 26,
+     "name": "Stephan Lichtsteiner",
+     "position": "RB"
+    },
+    {
+     "number": 15,
+     "name": "Andrea Barzagli",
+     "position": "RCB"
+    },
+    {
+     "number": 19,
+     "name": "Leonardo Bonucci",
+     "position": "LCB"
+    },
+    {
+     "number": 33,
+     "name": "Patrice Evra",
+     "position": "LB"
+    },
+    {
+     "number": 8,
+     "name": "Claudio Marchisio",
+     "position": "CM"
+    },
+    {
+     "number": 21,
+     "name": "Andrea Pirlo",
+     "position": "DM"
+    },
+    {
+     "number": 6,
+     "name": "Paul Pogba",
+     "position": "CM"
+    },
+    {
+     "number": 23,
+     "name": "Arturo Vidal",
+     "position": "AM"
+    },
+    {
+     "number": 10,
+     "name": "Carlos Tévez",
+     "position": "ST"
+    },
+    {
+     "number": 9,
+     "name": "Álvaro Morata",
+     "position": "ST"
+    }
+   ]
+  },
+  "scorers": [
+   "Rakitić 4'",
+   "Morata 55'",
+   "Suárez 68'",
+   "Neymar 97'"
+  ],
+  "notes": "Barça's second treble, powered by the 'MSN' front three. Juventus lined up in a 4-3-1-2 with Vidal at the tip behind the Tévez–Morata strike pair and Pogba a central midfielder."
+ },
+ {
+  "year": 2016,
+  "date": "2016-05-28",
+  "venue": "San Siro",
+  "city": "Milan",
+  "country": "Italy",
+  "score": "1–1",
+  "afterExtraTime": true,
+  "penalties": "5–3",
+  "teamA": {
+   "name": "Real Madrid",
+   "manager": "Zinedine Zidane",
+   "formation": "4-3-3",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Keylor Navas",
+     "position": "GK"
+    },
+    {
+     "number": 15,
+     "name": "Dani Carvajal",
+     "position": "RB"
+    },
+    {
+     "number": 4,
+     "name": "Sergio Ramos",
+     "position": "RCB"
+    },
+    {
+     "number": 3,
+     "name": "Pepe",
+     "position": "LCB"
+    },
+    {
+     "number": 12,
+     "name": "Marcelo",
+     "position": "LB"
+    },
+    {
+     "number": 14,
+     "name": "Casemiro",
+     "position": "DM"
+    },
+    {
+     "number": 8,
+     "name": "Toni Kroos",
+     "position": "CM"
+    },
+    {
+     "number": 19,
+     "name": "Luka Modrić",
+     "position": "CM"
+    },
+    {
+     "number": 11,
+     "name": "Gareth Bale",
+     "position": "RW"
+    },
+    {
+     "number": 9,
+     "name": "Karim Benzema",
+     "position": "CF"
+    },
+    {
+     "number": 7,
+     "name": "Cristiano Ronaldo",
+     "position": "LW"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Atlético Madrid",
+   "manager": "Diego Simeone",
+   "formation": "4-4-2",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 13,
+     "name": "Jan Oblak",
+     "position": "GK"
+    },
+    {
+     "number": 20,
+     "name": "Juanfran",
+     "position": "RB"
+    },
+    {
+     "number": 15,
+     "name": "Stefan Savić",
+     "position": "RCB"
+    },
+    {
+     "number": 2,
+     "name": "Diego Godín",
+     "position": "LCB"
+    },
+    {
+     "number": 3,
+     "name": "Filipe Luís",
+     "position": "LB"
+    },
+    {
+     "number": 6,
+     "name": "Koke",
+     "position": "LM"
+    },
+    {
+     "number": 5,
+     "name": "Augusto Fernández",
+     "position": "CM"
+    },
+    {
+     "number": 14,
+     "name": "Gabi",
+     "position": "CM"
+    },
+    {
+     "number": 8,
+     "name": "Saúl",
+     "position": "RM"
+    },
+    {
+     "number": 7,
+     "name": "Antoine Griezmann",
+     "position": "SS"
+    },
+    {
+     "number": 9,
+     "name": "Fernando Torres",
+     "position": "ST"
+    }
+   ]
+  },
+  "scorers": [
+   "Ramos 15'",
+   "Carrasco 79'"
+  ],
+  "notes": "1–1 after extra time; Real won the shootout 5–3 (Juanfran missed, Ronaldo scored the decider) — 'La Undécima'. Atlético's equaliser came from substitute Yannick Carrasco."
+ },
+ {
+  "year": 2017,
+  "date": "2017-06-03",
+  "venue": "Millennium Stadium",
+  "city": "Cardiff",
+  "country": "Wales",
+  "score": "4–1",
+  "afterExtraTime": false,
+  "penalties": null,
+  "teamA": {
+   "name": "Real Madrid",
+   "manager": "Zinedine Zidane",
+   "formation": "4-3-1-2",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Keylor Navas",
+     "position": "GK"
+    },
+    {
+     "number": 2,
+     "name": "Dani Carvajal",
+     "position": "RB"
+    },
+    {
+     "number": 4,
+     "name": "Sergio Ramos",
+     "position": "RCB"
+    },
+    {
+     "number": 5,
+     "name": "Raphaël Varane",
+     "position": "LCB"
+    },
+    {
+     "number": 12,
+     "name": "Marcelo",
+     "position": "LB"
+    },
+    {
+     "number": 14,
+     "name": "Casemiro",
+     "position": "DM"
+    },
+    {
+     "number": 8,
+     "name": "Toni Kroos",
+     "position": "CM"
+    },
+    {
+     "number": 10,
+     "name": "Luka Modrić",
+     "position": "CM"
+    },
+    {
+     "number": 22,
+     "name": "Isco",
+     "position": "AM"
+    },
+    {
+     "number": 9,
+     "name": "Karim Benzema",
+     "position": "CF"
+    },
+    {
+     "number": 7,
+     "name": "Cristiano Ronaldo",
+     "position": "CF"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Juventus",
+   "manager": "Massimiliano Allegri",
+   "formation": "3-4-1-2",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Gianluigi Buffon",
+     "position": "GK"
+    },
+    {
+     "number": 15,
+     "name": "Andrea Barzagli",
+     "position": "RCB"
+    },
+    {
+     "number": 19,
+     "name": "Leonardo Bonucci",
+     "position": "CB"
+    },
+    {
+     "number": 3,
+     "name": "Giorgio Chiellini",
+     "position": "LCB"
+    },
+    {
+     "number": 23,
+     "name": "Dani Alves",
+     "position": "RWB"
+    },
+    {
+     "number": 5,
+     "name": "Miralem Pjanić",
+     "position": "CM"
+    },
+    {
+     "number": 6,
+     "name": "Sami Khedira",
+     "position": "CM"
+    },
+    {
+     "number": 12,
+     "name": "Alex Sandro",
+     "position": "LWB"
+    },
+    {
+     "number": 21,
+     "name": "Paulo Dybala",
+     "position": "AM"
+    },
+    {
+     "number": 9,
+     "name": "Gonzalo Higuaín",
+     "position": "ST"
+    },
+    {
+     "number": 17,
+     "name": "Mario Mandžukić",
+     "position": "LF"
+    }
+   ]
+  },
+  "scorers": [
+   "Ronaldo 20'",
+   "Mandžukić 27'",
+   "Casemiro 61'",
+   "Ronaldo 64'",
+   "Asensio 90'"
+  ],
+  "notes": "Real became the first club to retain the Champions League. Juventus used a back three (Barzagli, Bonucci, Chiellini) with Alves and Alex Sandro as wing-backs; Real's 4th was scored by sub Asensio."
+ },
+ {
+  "year": 2018,
+  "date": "2018-05-26",
+  "venue": "NSC Olimpiyskiy Stadium",
+  "city": "Kyiv",
+  "country": "Ukraine",
+  "score": "3–1",
+  "afterExtraTime": false,
+  "penalties": null,
+  "teamA": {
+   "name": "Real Madrid",
+   "manager": "Zinedine Zidane",
+   "formation": "4-3-1-2",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Keylor Navas",
+     "position": "GK"
+    },
+    {
+     "number": 2,
+     "name": "Dani Carvajal",
+     "position": "RB"
+    },
+    {
+     "number": 5,
+     "name": "Raphaël Varane",
+     "position": "RCB"
+    },
+    {
+     "number": 4,
+     "name": "Sergio Ramos",
+     "position": "LCB"
+    },
+    {
+     "number": 12,
+     "name": "Marcelo",
+     "position": "LB"
+    },
+    {
+     "number": 14,
+     "name": "Casemiro",
+     "position": "DM"
+    },
+    {
+     "number": 10,
+     "name": "Luka Modrić",
+     "position": "CM"
+    },
+    {
+     "number": 8,
+     "name": "Toni Kroos",
+     "position": "CM"
+    },
+    {
+     "number": 22,
+     "name": "Isco",
+     "position": "AM"
+    },
+    {
+     "number": 9,
+     "name": "Karim Benzema",
+     "position": "CF"
+    },
+    {
+     "number": 7,
+     "name": "Cristiano Ronaldo",
+     "position": "CF"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Liverpool",
+   "manager": "Jürgen Klopp",
+   "formation": "4-3-3",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Loris Karius",
+     "position": "GK"
+    },
+    {
+     "number": 66,
+     "name": "Trent Alexander-Arnold",
+     "position": "RB"
+    },
+    {
+     "number": 6,
+     "name": "Dejan Lovren",
+     "position": "RCB"
+    },
+    {
+     "number": 4,
+     "name": "Virgil van Dijk",
+     "position": "LCB"
+    },
+    {
+     "number": 26,
+     "name": "Andrew Robertson",
+     "position": "LB"
+    },
+    {
+     "number": 14,
+     "name": "Jordan Henderson",
+     "position": "DM"
+    },
+    {
+     "number": 7,
+     "name": "James Milner",
+     "position": "CM"
+    },
+    {
+     "number": 5,
+     "name": "Georginio Wijnaldum",
+     "position": "CM"
+    },
+    {
+     "number": 11,
+     "name": "Mohamed Salah",
+     "position": "RW"
+    },
+    {
+     "number": 9,
+     "name": "Roberto Firmino",
+     "position": "CF"
+    },
+    {
+     "number": 19,
+     "name": "Sadio Mané",
+     "position": "LW"
+    }
+   ]
+  },
+  "scorers": [
+   "Benzema 51'",
+   "Mané 55'",
+   "Bale 64'",
+   "Bale 83'"
+  ],
+  "notes": "Real's third consecutive title. Salah went off injured on 30'; both Bale goals (including an overhead kick) came as a substitute, and keeper Karius made two costly errors."
+ },
+ {
+  "year": 2019,
+  "date": "2019-06-01",
+  "venue": "Estadio Metropolitano",
+  "city": "Madrid",
+  "country": "Spain",
+  "score": "2–0",
+  "afterExtraTime": false,
+  "penalties": null,
+  "teamA": {
+   "name": "Liverpool",
+   "manager": "Jürgen Klopp",
+   "formation": "4-3-3",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 13,
+     "name": "Alisson",
+     "position": "GK"
+    },
+    {
+     "number": 66,
+     "name": "Trent Alexander-Arnold",
+     "position": "RB"
+    },
+    {
+     "number": 32,
+     "name": "Joël Matip",
+     "position": "RCB"
+    },
+    {
+     "number": 4,
+     "name": "Virgil van Dijk",
+     "position": "LCB"
+    },
+    {
+     "number": 26,
+     "name": "Andrew Robertson",
+     "position": "LB"
+    },
+    {
+     "number": 14,
+     "name": "Jordan Henderson",
+     "position": "CM"
+    },
+    {
+     "number": 3,
+     "name": "Fabinho",
+     "position": "DM"
+    },
+    {
+     "number": 5,
+     "name": "Georginio Wijnaldum",
+     "position": "CM"
+    },
+    {
+     "number": 11,
+     "name": "Mohamed Salah",
+     "position": "RW"
+    },
+    {
+     "number": 9,
+     "name": "Roberto Firmino",
+     "position": "CF"
+    },
+    {
+     "number": 10,
+     "name": "Sadio Mané",
+     "position": "LW"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Tottenham Hotspur",
+   "manager": "Mauricio Pochettino",
+   "formation": "4-2-3-1",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Hugo Lloris",
+     "position": "GK"
+    },
+    {
+     "number": 2,
+     "name": "Kieran Trippier",
+     "position": "RB"
+    },
+    {
+     "number": 4,
+     "name": "Toby Alderweireld",
+     "position": "RCB"
+    },
+    {
+     "number": 5,
+     "name": "Jan Vertonghen",
+     "position": "LCB"
+    },
+    {
+     "number": 3,
+     "name": "Danny Rose",
+     "position": "LB"
+    },
+    {
+     "number": 8,
+     "name": "Harry Winks",
+     "position": "DM"
+    },
+    {
+     "number": 17,
+     "name": "Moussa Sissoko",
+     "position": "DM"
+    },
+    {
+     "number": 7,
+     "name": "Son Heung-min",
+     "position": "LW"
+    },
+    {
+     "number": 23,
+     "name": "Christian Eriksen",
+     "position": "AM"
+    },
+    {
+     "number": 20,
+     "name": "Dele Alli",
+     "position": "RW"
+    },
+    {
+     "number": 10,
+     "name": "Harry Kane",
+     "position": "CF"
+    }
+   ]
+  },
+  "scorers": [
+   "Salah 2' (pen.)",
+   "Origi 87'"
+  ],
+  "notes": "An all-English final. Salah's 2nd-minute penalty (after a Sissoko handball) was among the fastest goals in final history; Origi sealed it late."
+ },
+ {
+  "year": 2020,
+  "date": "2020-08-23",
+  "venue": "Estádio da Luz",
+  "city": "Lisbon",
+  "country": "Portugal",
+  "score": "1–0",
+  "afterExtraTime": false,
+  "penalties": null,
+  "teamA": {
+   "name": "Bayern Munich",
+   "manager": "Hansi Flick",
+   "formation": "4-2-3-1",
+   "isWinner": true,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Manuel Neuer",
+     "position": "GK"
+    },
+    {
+     "number": 32,
+     "name": "Joshua Kimmich",
+     "position": "RB"
+    },
+    {
+     "number": 17,
+     "name": "Jérôme Boateng",
+     "position": "RCB"
+    },
+    {
+     "number": 27,
+     "name": "David Alaba",
+     "position": "LCB"
+    },
+    {
+     "number": 19,
+     "name": "Alphonso Davies",
+     "position": "LB"
+    },
+    {
+     "number": 6,
+     "name": "Thiago Alcântara",
+     "position": "DM"
+    },
+    {
+     "number": 18,
+     "name": "Leon Goretzka",
+     "position": "CM"
+    },
+    {
+     "number": 22,
+     "name": "Serge Gnabry",
+     "position": "RW"
+    },
+    {
+     "number": 25,
+     "name": "Thomas Müller",
+     "position": "AM"
+    },
+    {
+     "number": 29,
+     "name": "Kingsley Coman",
+     "position": "LW"
+    },
+    {
+     "number": 9,
+     "name": "Robert Lewandowski",
+     "position": "CF"
+    }
+   ]
+  },
+  "teamB": {
+   "name": "Paris Saint-Germain",
+   "manager": "Thomas Tuchel",
+   "formation": "4-3-3",
+   "isWinner": false,
+   "startingXI": [
+    {
+     "number": 1,
+     "name": "Keylor Navas",
+     "position": "GK"
+    },
+    {
+     "number": 4,
+     "name": "Thilo Kehrer",
+     "position": "RB"
+    },
+    {
+     "number": 2,
+     "name": "Thiago Silva",
+     "position": "RCB"
+    },
+    {
+     "number": 3,
+     "name": "Presnel Kimpembe",
+     "position": "LCB"
+    },
+    {
+     "number": 14,
+     "name": "Juan Bernat",
+     "position": "LB"
+    },
+    {
+     "number": 8,
+     "name": "Leandro Paredes",
+     "position": "DM"
+    },
+    {
+     "number": 21,
+     "name": "Ander Herrera",
+     "position": "CM"
+    },
+    {
+     "number": 5,
+     "name": "Marquinhos",
+     "position": "CM"
+    },
+    {
+     "number": 11,
+     "name": "Ángel Di María",
+     "position": "RW"
+    },
+    {
+     "number": 7,
+     "name": "Kylian Mbappé",
+     "position": "CF"
+    },
+    {
+     "number": 10,
+     "name": "Neymar",
+     "position": "LW"
+    }
+   ]
+  },
+  "scorers": [
+   "Coman 59'"
+  ],
+  "notes": "Played behind closed doors due to COVID-19. Bayern won every match en route to the treble; Coman — Paris-born and a former PSG academy player — headed the winner against his boyhood club."
+ }
 ];
 
 /* Team visual identities: jersey fill, number text color, accent dot */
