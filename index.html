@@ -3234,10 +3234,27 @@ function init(){
   // build the year jump-strip
   const yc=document.getElementById('years');
   yc.innerHTML=DATA.map(m=>`<button class="yb" data-y="${m.year}">${m.year}</button>`).join('');
-  yc.querySelectorAll('.yb').forEach(b=>b.addEventListener('click',()=>{
-    const el=document.getElementById('y'+b.dataset.y);
-    if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+  const strip=yc.parentElement;                 // the horizontally-scrollable .years bar
+  const btns={};
+  yc.querySelectorAll('.yb').forEach(b=>btns[b.dataset.y]=b);
+
+  // highlight a year and keep it centred in the strip — HORIZONTAL only, never scrolls the page
+  function setActive(y){
+    Object.keys(btns).forEach(k=>btns[k].classList.toggle('active',k===y));
+    const b=btns[y]; if(!b) return;
+    const br=b.getBoundingClientRect(), sr=strip.getBoundingClientRect();
+    strip.scrollBy({left:(br.left+br.width/2)-(sr.left+sr.width/2),behavior:'smooth'});
+  }
+
+  // tap a year -> jump to that final; mute the scroll-spy during the smooth scroll so it can't fight the jump
+  let spyOff=false,spyTimer=null;
+  Object.values(btns).forEach(b=>b.addEventListener('click',()=>{
+    const el=document.getElementById('y'+b.dataset.y); if(!el) return;
+    setActive(b.dataset.y);
+    spyOff=true; clearTimeout(spyTimer); spyTimer=setTimeout(()=>{spyOff=false;},900);
+    el.scrollIntoView({behavior:'smooth',block:'start'});
   }));
+
   // theme toggle
   const tb=document.getElementById('themeBtn');
   tb.addEventListener('click',()=>{
@@ -3245,22 +3262,23 @@ function init(){
     const light=document.body.classList.contains('light');
     tb.innerHTML=light?'☀️ <span>Light</span>':'🌙 <span>Dark</span>';
   });
-  // scroll-spy: highlight the year currently in view
-  const btns={};
-  document.querySelectorAll('.yb').forEach(b=>btns[b.dataset.y]=b);
+
+  // scroll-spy: passively highlight the most-visible final while you scroll
   const io=new IntersectionObserver(entries=>{
-    entries.forEach(en=>{
-      if(en.isIntersecting){
-        const y=en.target.id.slice(1);
-        Object.keys(btns).forEach(k=>btns[k].classList.toggle('active',k===y));
-        if(btns[y]) btns[y].scrollIntoView({inline:'center',block:'nearest'});
-      }
-    });
-  },{rootMargin:'-45% 0px -50% 0px',threshold:0});
+    if(spyOff) return;
+    let best=null,r=-1;
+    entries.forEach(en=>{ if(en.isIntersecting && en.intersectionRatio>=r){best=en;r=en.intersectionRatio;} });
+    if(best) setActive(best.target.id.slice(1));
+  },{rootMargin:'-40% 0px -55% 0px',threshold:[0,0.05,0.2,0.5]});
   document.querySelectorAll('.final').forEach(s=>io.observe(s));
-  // optional deep-link: #2013 scrolls straight to that final
+  // initial highlight + optional deep-link (e.g. #2013 opens on that final)
   const h=(location.hash||'').replace('#','').replace(/^y/,'');
-  if(h){const el=document.getElementById('y'+h); if(el) setTimeout(()=>el.scrollIntoView({block:'start'}),80);}
+  if(h && btns[h]){
+    setActive(h); spyOff=true; clearTimeout(spyTimer); spyTimer=setTimeout(()=>{spyOff=false;},900);
+    const el=document.getElementById('y'+h); if(el) setTimeout(()=>el.scrollIntoView({block:'start'}),80);
+  } else {
+    setActive(String(DATA[0].year));
+  }
 }
 document.addEventListener('DOMContentLoaded',init);
 </script>
